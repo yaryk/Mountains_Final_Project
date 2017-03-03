@@ -1,0 +1,1 @@
+function some(){alert("hello")}
