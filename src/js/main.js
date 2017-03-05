@@ -1,3 +1,1 @@
-function some () {
-    alert("hello");
-}
+

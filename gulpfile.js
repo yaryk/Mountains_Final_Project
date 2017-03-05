@@ -4,7 +4,7 @@ var gulp = require("gulp"),
     uglify = require("gulp-uglify"),
     imagemin = require("gulp-imagemin"),
     concat = require("gulp-concat"),
-    cssnano = require("gulp-cssnano"),
+    nano = require("gulp-cssnano"),
     sourcemaps = require("gulp-sourcemaps"),
     gulpIf = require("gulp-if"),
     sync = require("browser-sync").create();
@@ -17,9 +17,9 @@ gulp.task("css:own", function() {
             .pipe(gulpIf(isDevelopment, sourcemaps.init()))
             .pipe(less())
             .pipe(autoprefixer("last 2 version"))
-            .pipe(cssnano())
+            .pipe(nano())
             .pipe(gulpIf(isDevelopment, sourcemaps.write()))
-            .pipe(gulp.dest("dist/css/main.css"));
+            .pipe(gulp.dest("dist/css/"));
 });
 gulp.task("css:vendor", function() {
     return gulp.src([
@@ -37,7 +37,7 @@ gulp.task("js:own", function() {
 });
 
 gulp.task("js:vendor", function() {
-    return gulp.task([
+    return gulp.src([
         "node_modules/jquery/dist/jquery.js",
         "node_modules/bootstrap/dist/js/bootstrap.js"
     ])
@@ -45,12 +45,11 @@ gulp.task("js:vendor", function() {
     .pipe(gulpIf(!isDevelopment, uglify()))
     .pipe(gulp.dest("dist/js"));
 });
-
 // images
 gulp.task("images", function() {
     return gulp.src("imgs/**/*.*")
     .pipe(gulpIf(!isDevelopment, imagemin()))
-    .pipe("dist/imgs");
+    .pipe(gulp.dest("dist/imgs/"));
 });
 
 // html 
@@ -65,7 +64,7 @@ gulp.task("watch", ["build"] ,function() {
     })
 
     gulp.watch("src/js/*.js", ["js:own"]);
-    gulp.watch("src/css/**/*.less", ["css:own"]);
+    gulp.watch("src/styles/**/*.less", ["css:own"]);
     gulp.watch("src/*.html", ["html"]);
     gulp.watch("dist/*.html").on("change", sync.reload);
     gulp.watch("dist/css/main.css").on("change", sync.reload);
