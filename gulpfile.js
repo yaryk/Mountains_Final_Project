@@ -46,11 +46,11 @@ gulp.task("js:vendor", function() {
     .pipe(gulp.dest("dist/js"));
 });
 // images
-gulp.task("images", function() {
-    return gulp.src("imgs/**/*.*")
-    .pipe(gulpIf(!isDevelopment, imagemin()))
-    .pipe(gulp.dest("dist/imgs/"));
-});
+    gulp.task("images", function() {
+        return gulp.src("imgs/**/*.*")
+        .pipe(gulpIf(!isDevelopment, imagemin()))
+        .pipe(gulp.dest("dist/imgs/"));
+    });
 
 // html 
 gulp.task("html", function() {
