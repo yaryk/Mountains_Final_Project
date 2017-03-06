@@ -36,11 +36,11 @@
 }
 
 .aboutUsSection {
-    background-image: url("/../imgs/bgMap.png"); // TODO: fix background can't load bg! 
+    background-image: url("../imgs/bgMap.png"); // TODO: fix background can't load bg! 
     background-color: #f6f4f4;
 
     &__containerLeft {
-       margin-top: 100px;
+       margin-top: 70px;
        
     }
     &__header {
@@ -49,6 +49,16 @@
         text-transform: uppercase;
         font-family: "OpenSansBold", sans-serif;
         margin-bottom: 30px;
+
+        &:before {
+            content: "";
+            background-image: url("../imgs/beforeDecHeader.png");
+            background-repeat: no-repeat;
+            display: block;
+            height: 10px;  
+            margin: auto; 
+            margin-bottom: 30px;    
+        }
     }
 
     &__capture {
@@ -77,4 +87,107 @@
         margin-top: -110px;
     }
 
+}
+
+.journalSection {
+
+    &__header {
+        font-family: "OpenSansBold", sans-serif;
+        font-size: 30px;
+        color: #000;
+        text-transform: uppercase;
+        margin-bottom: 60px;
+        &:before {
+            content: "";
+            background-image: url("../imgs/beforeDecHeader.png");
+            background-repeat: no-repeat;
+            display: block;
+            height: 10px;  
+            width: 85px;
+            margin: auto;
+            margin-bottom: 35px;
+            margin-top: 70px;     
+        }
+    }
+
+    &__cardsContainer {
+        box-shadow: 0 0 10px #ccc;
+        width: auto;
+    }
+
+    &__row {
+        font-size: 0;
+    }
+
+    &__imgCard {
+        padding: 0 !important;
+        position: relative;
+    }
+
+    &__img {
+        width: 310px;
+    }
+
+    &__smallImg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+        &.like {
+        margin-top: -40px;
+        margin-left: -40px;
+        }
+
+        &.sign {
+           margin-top: -37px;
+           margin-left: -30px; 
+        }
+
+        &.blief {
+            margin-left: -32px;
+            margin-top: -30px;
+        }
+    }
+    &__textCard {
+        padding: 0 !important;
+        width: 310px;
+        height: 100px;
+        font-size: 20px;
+        text-align: center;
+
+        &__name {
+            color: @blue-main;
+            text-transform: uppercase;
+            font-family: "OpenSansBold", sans-serif;
+            font-size: 11px;
+            text-align: center;
+            margin-bottom: 50px;
+            display: inline-block;
+            
+        }
+
+        &__header {
+            font-family: "OpenSansBold", sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+            width: 250px;
+            margin: auto;
+            margin-bottom: 25px;
+        }
+
+        &__content {
+            font-family: "OpenSansRegular", sans-serif;
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 20px;
+        }
+
+        &__count {
+            font-family: "Times New Roman", serif;
+            font-size: 14px;
+            text-align: center;
+            font-style: italic;
+        }
+    }
 }
