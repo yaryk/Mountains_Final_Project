@@ -7,6 +7,30 @@ body, html {
     padding-bottom: 85px;
 }
 
+.headerSecond {
+        color: #000;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-family: "OpenSansBold", sans-serif;
+
+        &:before {
+            content: "";
+            background-image: url("../imgs/beforeDecHeader.png");
+            background-repeat: no-repeat;
+            display: block;
+            height: 10px;  
+            margin: auto; 
+            margin-bottom: 30px;    
+        }
+}
+
+.contentText {
+    color: @gray-main;
+        font-family: "OpenSansRegular", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+
+}
 .mainSection {
     background: url("/imgs/bgMainSection.png") top center;
     background-size: cover;
@@ -31,8 +55,6 @@ body, html {
     }
 
     &__capture {
-        color: @gray-main;
-        font-family: "OpenSansRegular", sans-serif;
         font-size: 18px;
         width: 435px;
         margin-bottom: 30px;
@@ -52,28 +74,11 @@ body, html {
       margin-top: 205px;
     }
     &__header {
-        color: #000;
         font-size: 20px;
-        text-transform: uppercase;
-        font-family: "OpenSansBold", sans-serif;
         margin-bottom: 30px;
-
-        &:before {
-            content: "";
-            background-image: url("../imgs/beforeDecHeader.png");
-            background-repeat: no-repeat;
-            display: block;
-            height: 10px;  
-            margin: auto; 
-            margin-bottom: 30px;    
-        }
     }
 
     &__capture {
-        color: @gray-main;
-        font-family: "OpenSansRegular", sans-serif;
-        font-size: 14px;
-        line-height: 20px;
         margin-bottom: 30px;
         width: 350px;
     }
@@ -103,27 +108,18 @@ body, html {
 .journalSection {
 
     &__header {
-        font-family: "OpenSansBold", sans-serif;
-        font-size: 30px;
-        color: #000;
-        text-transform: uppercase;
         margin-bottom: 60px;
         &:before {
-            content: "";
-            background-image: url("../imgs/beforeDecHeader.png");
-            background-repeat: no-repeat;
-            display: block;
-            height: 10px;  
             width: 85px;
-            margin: auto;
             margin-bottom: 35px;
             margin-top: 70px;     
         }
     }
 
     &__cardsContainer {
-        box-shadow: 0 0 10px #ccc;
+        box-shadow: 0 0 17px #ccc;
         width: auto;
+        margin-bottom: 90px;
     }
 
     &__row {
@@ -133,10 +129,6 @@ body, html {
     &__imgCard {
         padding: 0 !important;
         position: relative;
-    }
-
-    &__img {
-       
     }
 
     &__smallImg {
@@ -173,6 +165,7 @@ body, html {
             font-size: 11px;
             text-align: center;
             margin-bottom: 50px;
+            margin-top: 47px;
             display: inline-block;
         }
 
@@ -180,17 +173,21 @@ body, html {
             font-family: "OpenSansBold", sans-serif;
             text-transform: uppercase;
             text-align: center;
-            width: 250px;
+            width: 320px;
             margin: auto;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
+            
+            &__textThrough {
+                text-decoration: line-through;
+            }
         }
 
         &__content {
-            font-family: "OpenSansRegular", sans-serif;
-            font-size: 14px;
             text-align: center;
-            margin-bottom: 30px;
-            line-height: 20px;
+            margin: 0 auto;
+            margin-bottom: 42px;
+            width: 270px;
+             
         }
 
         &__count {
@@ -198,6 +195,83 @@ body, html {
             font-size: 14px;
             text-align: center;
             font-style: italic;
+        }
+    }
+}
+
+.wonnaGoSection {
+    background-color: #f6f4f4;
+    background-image: url("../imgs/bgWonnaGo.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    padding-top: 145px;
+
+    &__header {
+        font-size: 20px;
+        margin-bottom: 25px;        
+    }
+
+    &__content {
+        width: 705px;
+        font-size: 16px;
+        margin-bottom: 33px;
+    }
+
+    &__form {
+        margin-bottom: 18px;
+
+        &__fName, &__phone {
+            height: 70px;
+            width: 300px;
+            border: none;
+            padding: 25px;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            font-family: "OpenSansRegular", sans-serif;
+            color: @gray-main;
+
+            &:focus {
+                outline: none;
+            }
+            }
+
+        &__phone {
+            width: 550px;
+            border: none;
+            padding: 25px;
+            margin-left: -5px;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: none;
+            border-top-left-radius: none;
+            
+            &:before {
+                display: block;
+                content: "sdsd";
+            }
+        }
+        
+        &__btn {
+            padding: 23px 57px;
+            margin-left: -211px;
+        }
+    }
+
+    &__warr {
+        font-family: "OpenSansRegular", sans-serif;
+        color: @blue-main;
+        font-size: 14px;
+        margin-bottom: 322px;
+
+        &:before {
+            content: "" ;
+            background: url("../imgs/lockIcon.png");
+            display: block;
+            width: 14px;
+            height: 16px;
+            float: left;   
+            margin-right: 12px;
         }
     }
 }
