@@ -1,1 +1,1 @@
-var orderNow=document.forms.orderNow;orderNow.addEventListener("submit",function(e){e.preventDefault()});
+var orderNow=document.forms.orderNow;orderNow.addEventListener("submit",function(e){e.preventDefault()}),$(function(){$(".rate").barrating({theme:"fontawesome-stars",allowEmpty:!0}),$(".gallerySection__grid").masonry({itemSelector:".gallerySection__item",columnWidth:263})});

@@ -276,6 +276,240 @@ body, html {
     }
 }
 
+.howWeWorkSection {
+
+     &__header {
+        margin-bottom: 98px;
+        &:before {
+            width: 85px;
+        }  
+     }
+
+      &__grid {
+        background: url("../imgs/howWeWorkGrid.png");
+        background-repeat: no-repeat;
+        width: 880px;
+        margin: 0 auto;
+        margin-bottom: 105px;
+      }
+
+      &__container {
+         
+          &__count {
+                width: 48px;
+                height: 48px;
+                border-radius: 24px;
+                border: 3px solid @blue-main;
+                margin: 0 auto;
+                transform: translateY(-50%);
+                margin-bottom: 32px;
+                background: #fff;
+                position: relative;
+          }
+          &__num {
+            color: @blue-main;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: "RobotoBlack", sans-serif;
+            font-size: 16px;
+
+          }
+
+          &__circle {
+                width: 180px;
+                height: 180px;
+                border-radius: 90px;
+                background: #f0f3f6;
+                position: relative;
+                margin: 0 auto;
+                margin-bottom: 30px;
+
+              &__img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+              }
+          }
+
+          &__header {
+            font-family: "RobotoBlack", sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 24px;
+          }
+
+          &__capture {
+            font-family: "RobotoLight", sans-serif;
+            font-size: 16px;
+            color: #949494;
+            text-align: center;
+            line-height: 24px;
+            width: 200px;
+          }
+      } //---- container end
+    } //---- weWonnaWorkSection end 
+    .docSign {
+        
+    }
+
+    .personsSign {
+        
+    }
+
+    .bookSign {
+       
+    }
+
+    .checkSign {
+    }
+
+// travel with us
+.travelWithUs {
+    height: 1024px;
+    background-image: url(../imgs/bgTravelWithUs.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 72px;
+    &__header {
+        margin-bottom: 100px;
+
+        &:before {
+            width: 85px;
+        }
+    }
+
+   
+    &__cardContainer {
+        width: 17%;
+        margin-right: 3%;
+        position: relative;
+        border-radius: 3px;
+        padding: 0;
+        margin-bottom: 194px;
+
+        &__carpathian {
+            background: url(../imgs/bgCarpathian.jpg);
+            background-repeat: no-repeat;
+        }
+        &__alps {
+            background: url(../imgs/bgAlps.jpg);
+            background-repeat: no-repeat;
+        }
+
+        &__pyrenees {
+            background: url(../imgs/bgPyrenees.jpg);
+            background-repeat: no-repeat;
+            
+        }
+        &__rocky {
+            background: url(../imgs/bgRocky.jpg);
+            background-repeat: no-repeat;
+            
+        }
+        &__kavkaz {
+            background: url(../imgs/bgRocky.jpg);
+            background-repeat: no-repeat;
+            
+        }
+
+        &__stars {
+            margin: 15px auto 132px 22px;
+            
+        }
+
+        &__header {
+            color: #fff;
+            font-family: "OpenSansRegular", sans-serif;
+            font-size: 28px;
+            margin: auto auto 17px 22px;
+        }
+
+        &__capture {
+            margin: auto auto 140px 22px;
+            font-family: "OpenSansRegular", sans-serif;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        &__priceContainer {
+           background-color: rgba(88, 90, 81, 0.5);
+           width: 100%;
+           position: absolute;
+           bottom: 10px;
+           height: 62px;
+           line-height: 62px;
+           vertical-align: middle;
+           border-radius: 3px;
+
+            &__oldPrice {
+                margin-left: 22px;
+                text-decoration: line-through;
+                color: #fff;
+                font-family: "OpenSansRegular", sans-serif;
+                font-size: 18px;
+
+            }
+
+            &__price {
+                position: absolute; 
+                right: 0;
+                margin-right: 12px;
+                font-family: "OpenSansExtraBold", sans-serif;
+                font-size: 26px;
+                color: #fff;
+            }
+        }
+    }
+}
+// customization themes from stars
+.br-theme-fontawesome-stars .br-widget a:after {
+  content: '\f005';
+  color: #fff;
+}
+.br-theme-fontawesome-stars .br-widget a.br-active:after {
+  color: @blue-main;
+}
+.br-theme-fontawesome-stars .br-widget a.br-selected:after {
+  color: @blue-main;
+}
+
+// gallery section 
+    .gallerySection {
+        &__header {
+            margin-bottom: 73px;
+            text-align: center;
+            &:before {
+                width: 85px;
+            }
+        }
+
+        &__grid {
+
+        }
+
+        &__item {
+            
+        }
+        &__width1 {
+            width: 361px;
+        }
+
+        &__width2 {
+            width: 457px;
+        }
+        
+        &__img {
+            max-width: 100%;
+        }
+    }
+
+    .grid-item { width: 200px; }
+    .grid-item--width2 { width: 400px; }
+
 .footer {
     height: 85px;
     background: #3e5d68;
