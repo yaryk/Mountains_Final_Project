@@ -118,7 +118,6 @@ body, html {
 
     &__cardsContainer {
         box-shadow: 0 0 17px #ccc;
-        width: auto;
         margin-bottom: 90px;
     }
 
@@ -129,6 +128,9 @@ body, html {
     &__imgCard {
         padding: 0 !important;
         position: relative;
+        width: 380px;
+        height: 380px;
+        
     }
 
     &__smallImg {
@@ -153,10 +155,12 @@ body, html {
     }
     &__textCard {
         padding: 0 !important;
+        margin: 0;
         width: 380px;
-        height: 100px;
+        height: 380px;
         font-size: 20px;
         text-align: center;
+        height: 380px;
 
         &__name {
             color: @blue-main;
@@ -439,7 +443,7 @@ body, html {
            background-color: rgba(88, 90, 81, 0.5);
            width: 100%;
            position: absolute;
-           bottom: 10px;
+           bottom: 0px;
            height: 62px;
            line-height: 62px;
            vertical-align: middle;
@@ -487,33 +491,169 @@ body, html {
             }
         }
 
-        &__grid {
-
-        }
-
-        &__item {
-            
-        }
-        &__width1 {
-            width: 361px;
-        }
-
-        &__width2 {
-            width: 457px;
-        }
-        
+       
+       
+       
         &__img {
-            max-width: 100%;
+           
         }
     }
 
-    .grid-item { width: 200px; }
-    .grid-item--width2 { width: 400px; }
+.brandSection {
+    background: #f8f9fa;
+    
+
+    &__carousel {
+        margin-top: 75px;
+        margin-bottom: 75px;
+    }   
+}
+
+.ourClientsSaySection {
+    background: url("../imgs/bgOurClientsSay.png");
+    background-size: 100% 100%;
+
+    &__header {
+        text-align: center;
+        margin-top: 70px;
+        margin-bottom: 90px;
+        &:before {
+            width: 85px;
+        }
+    }
+
+    &__quote {
+      color: #bcbcbc;
+      font-family: "OpenSansRegular", sans-serif;
+      font-size: 18px;
+      line-height: 33px;
+      margin-bottom: 35px;
+
+        &:before {
+            content: "";
+            display: block;
+            width: 24px;
+            height: 22px;
+            background: url("../imgs/quote.png");
+            margin-bottom: 20px;
+        }
+    }
+
+    &__author {
+        line-height: 65px;
+        margin-bottom: 140px;
+        &__photo {
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        &__name {
+            color: @blue-main;
+            font-size: 16px;
+            font-family: "OpenSansRegular", sans-serif;
+            vertical-align: top;
+        }
+        &__name strong {
+            vertical-align: top;
+            font-weight: bolder;
+        }
+    }
+
+    &__contactForm {
+        width: 515px;
+        padding: 42px 30px 50px 30px; 
+        margin: 0 auto;
+        background: url(../imgs/bgform.png);
+        background-size: 100% 100%;
+        &__header {
+            text-transform: uppercase;
+            color: @blue-main;
+            font-size: 30px;
+            font-family: "OpenSansRegular", sans-serif;
+            font-weight: bolder;
+            letter-spacing: 5px;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        &__capture {
+            color: #000;
+            font-size: 16px;
+            font-family: "OpenSansRegular", sans-serif;
+            text-align: center;
+            margin-bottom: 34px;
+        }
+
+        &__input {
+            display: block;
+            width: 100%;
+            border: none;
+            border-radius: 3px;
+            padding: 24px 20px;
+            color: @gray-main;
+            font-family: "RobotoLight";
+            font-size: 18px;
+            margin-bottom: 20px;
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &__btn {
+            padding: 30px 203px; 
+            letter-spacing: 2px;  
+        }
+    }
+}
 
 .footer {
     height: 85px;
     background: #3e5d68;
     margin-top: -85px;
+    line-height: 83px;
+    
+    &__copyright {
+      color: #78aebe;
+      font-family: "OpenSansRegular", sans-serif;
+      font-size: 18px;
+    }
+
+    &__social {
+      text-align: center;
+      font-size: 0;
+
+        &__item {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        &__item:last-child {
+            margin-right: 0;
+        }
+
+        &__link {
+            display: block;
+            width: 39px;
+            height: 39px;
+            background: url(../imgs/vkIcon.png);
+           
+        }
+        &__link.tw {
+            background: url(../imgs/twIcon.png);
+        }
+        &__link.fb {
+            background: url(../imgs/facebookIcon.png);
+        }
+       
+    }
+
+    &__number {
+        font-family: "RobotoBlack", sans-serif;
+        font-size: 27px;
+        color: #7ec4d6;
+        font-weight: bolder;
+        float: right;
+    }
 }
 
 @media screen and (min-width: 1400px) {

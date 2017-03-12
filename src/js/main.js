@@ -10,13 +10,20 @@ $(function () { // jquery bar rating
     
   });
 
-  $('.gallerySection__grid').masonry({
+  $('.journalSection__cardsContainer').masonry({
   
-  itemSelector: '.gallerySection__item',
-  columnWidth: 263
+  itemSelector: '.card',
+  columnWidth: 380
   
 });
 
+
+     $('.brandSection__carousel').flickity({
+     freeScroll : true, 
+     contain : true, 
+     prevNextButtons : false, 
+     pageDots : false 
+});
 
 })
 

@@ -24,7 +24,8 @@ gulp.task("css:own", function() {
 gulp.task("css:vendor", function() {
     return gulp.src([
         "node_modules/bootstrap/dist/css/bootstrap.css",
-        
+        "node_modules/font-awesome/css/font-awesome.min.css",
+        "node_modules/flickity/dist/flickity.min.css"
     ])
     .pipe(gulpIf(!isDevelopment, nano()))
     .pipe(concat("vendor.css"))
@@ -42,7 +43,9 @@ gulp.task("js:vendor", function() {
         "node_modules/jquery/dist/jquery.js",
         "node_modules/bootstrap/dist/js/bootstrap.js",
         "node_modules/jquery-bar-rating/dist/jquery.barrating.min.js",
-        "node_modules/masonry-layout/dist/masonry.pkgd.min.js"
+        "node_modules/masonry-layout/dist/masonry.pkgd.min.js",
+        "node_modules/flickity/dist/flickity.pkgd.min.js"
+        
     ])
     .pipe(concat("vendor.js"))
     .pipe(gulpIf(!isDevelopment, uglify()))
