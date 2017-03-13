@@ -294,10 +294,12 @@ body, html {
         width: 880px;
         margin: 0 auto;
         margin-bottom: 105px;
+        position: relative;
+        height: 375px;
       }
 
       &__container {
-         
+         position: absolute;
           &__count {
                 width: 48px;
                 height: 48px;
@@ -353,23 +355,21 @@ body, html {
             line-height: 24px;
             width: 200px;
           }
+          &.docSign {
+              left: -84px;
+          }
+          &.personSign {
+              left: -21px;
+          }
+          &.bookSign {
+            right: -475px;
+          }
+          &.checkSign {
+            right: -538px;
+          }
       } //---- container end
     } //---- weWonnaWorkSection end 
-    .docSign {
-        
-    }
-
-    .personsSign {
-        
-    }
-
-    .bookSign {
-       
-    }
-
-    .checkSign {
-    }
-
+    
 // travel with us
 .travelWithUs {
     height: 1024px;
@@ -524,7 +524,6 @@ body, html {
 .ourClientsSaySection {
     background: url("../imgs/bgOurClientsSay.png");
     background-size: 100% 100%;
-
     &__header {
         text-align: center;
         margin-top: 70px;
@@ -577,6 +576,8 @@ body, html {
         margin: 0 auto;
         background: url(../imgs/bgform.png);
         background-size: 100% 100%;
+        border-radius: 10px;
+        margin-bottom: 165px;
         &__header {
             text-transform: uppercase;
             color: @blue-main;
@@ -668,18 +669,7 @@ body, html {
     }
 }
 
-@media screen and (min-width: 1400px) {
-    .aboutUsSection{
-     &__bigPhoto {
-        margin-left: -215px;
-    }
 
-    &__smallPhoto {
-        margin-top: -250px;
-        margin-left: -150px;
-    }
-    }
-}
 @media (min-width: 768px) and (max-width: 992px) {
     .aboutUsSection {
        background-position: 50% 20%;
@@ -703,6 +693,38 @@ body, html {
             margin-bottom: 90px;
         }
        
+    }
+
+    .wonnaGoSection {
+        &__form {
+
+            &__fName {
+                width: 250px;
+            }
+            &__phone {
+                width: 450px;
+            }
+        }
+    }
+    .howWeWorkSection {
+       margin-bottom: 30px;
+        &__header {
+            margin-bottom: 0;
+        }
+        &__grid {
+            background: none;
+            width: auto;
+        }
+        &__container {
+            position: static;
+
+            &__capture {
+                width: auto;   
+            }
+            &__count {
+                margin-top: 50px;
+            }
+        }
     }
 }
 
@@ -746,5 +768,40 @@ body, html {
            width: 220px;
            margin-top: -210px;
        }
+    }
+    .wonnaGoSection {
+        &__form {
+
+            &__fName {
+                width: 200px;
+            }
+            &__phone {
+                width: 315px;
+            }
+            &__btn {
+                padding: 23px 25px;
+                margin-left: -148px;
+            }
+        }
+    }
+    .howWeWorkSection {
+       margin-bottom: 30px;
+        &__header {
+            margin-bottom: 0;
+        }
+        &__grid {
+            background: none;
+            width: auto;
+        }
+        &__container {
+            position: static;
+
+            &__capture {
+                width: auto;   
+            }
+            &__count {
+                margin-top: 50px;
+            }
+        }
     }
 }

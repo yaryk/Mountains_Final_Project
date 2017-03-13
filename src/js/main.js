@@ -26,10 +26,8 @@ $(function () { // jquery bar rating
   });
 
   $('.journalSection__cardsContainer').masonry({
-  
   itemSelector: '.card',
   columnWidth: 380
-  
 });
  $('.grid').masonry({
   itemSelector: '.grid-item',
