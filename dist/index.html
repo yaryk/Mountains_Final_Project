@@ -18,34 +18,41 @@
                     <a href="#"> <img src="/imgs/headerLogo.png" alt="logo" class="header__logo__img align-middle"></a>
                 </div>
                 <nav class="header__nav">
-                    <ul class="menu">
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Our Story</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Services</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Work</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Journal</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Contact</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Table</a>
-                        </li>
-                    </ul>
+                    <button type="button" class="navbar-toggle collapsed header__collapseBtn" data-toggle="collapse" data-target="#menu-collapse"
+                        aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="glyphicon glyphicon-menu-hamburger"></span>
+                        </button>
+                    <div class="collapse navbar-collapse" id="menu-collapse">
+                        <ul class="menu">
+                            <li class="menu__item">
+                                <a href="#ourStory" class="menu__link">Our Story</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#jornal" class="menu__link">Journal</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#wonnaGo" class="menu__link">Wonna Go</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#travel" class="menu__link">Travel</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#clientSay" class="menu__link">Client say</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Table</a>
+                            </li>
+                        </ul>
+                        <div class="header__contactBtn-container">
+                            <a href="#" class="header__contactBtn">Call us</a>
+                        </div>
+                    </div>
                 </nav>
-                <div class="header__contactBtn-container">
-                    <a href="#" class="header__contactBtn">Call us</a>
-                </div>
             </div>
         </header>
         <!--MAIN SECTION-->
-        <section class="mainSection">
+        <section class="mainSection" id="mainSection">
             <div class="container">
                 <div class="mainSection__container">
                     <h1 class="mainSection__header">Travel with us</h1>
@@ -58,7 +65,7 @@
             </div>
         </section>
         <!--ABOUT US SECTION -->
-        <section class="aboutUsSection">
+        <section class="aboutUsSection" id="ourStory">
             <div class="container">
                 <div class="row">
                     <div class="col-md-5 col-sm-12 align-middle">
@@ -84,7 +91,7 @@
 
         </section>
         <!--OUR JOURNAL SECTION-->
-        <section class="journalSection">
+        <section class="journalSection" id="jornal">
             <div class="container">
                 <h2 class="headerSecond journalSection__header text-center">Our journal</h2>
                 <div class="journalSection__cardsContainer u-clearfix">
@@ -129,7 +136,7 @@
             </div>
         </section>
         <!--DO YOU WONNA GO SECTION-->
-        <section class="wonnaGoSection">
+        <section class="wonnaGoSection" id="wonnaGo">
             <div class="container">
                 <h2 class="headerSecond wonnaGoSection__header">Do you wonna go?</h2>
                 <p class="contentText wonnaGoSection__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Unde culpa, odit nihil tenetur iste amet accusantiumeos
@@ -201,7 +208,7 @@
             </div>
         </section>
         <!--TRAVEL WITH US SECTION-->
-        <section class="travelWithUs">
+        <section class="travelWithUs" id="travel">
             <div class="container">
                 <h2 class="headerSecond travelWithUs__header text-center">
                     Travel with us
@@ -364,7 +371,7 @@
             </div>
         </section>
         <!--our clients say section-->
-        <section class="ourClientsSaySection">
+        <section class="ourClientsSaySection" id="clientSay">
             <div class="container">
                 <h2 class="headerSecond ourClientsSaySection__header">Our clients say</h2>
                 <div class="row">
@@ -434,6 +441,7 @@
 
     <script src="/js/vendor.js"></script>
     <script src="/js/main.js"></script>
+   
 </body>
 
 </html>

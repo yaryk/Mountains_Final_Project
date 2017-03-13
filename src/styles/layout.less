@@ -481,6 +481,7 @@ body, html {
 
 // gallery section 
     .gallerySection {
+
         &__header {
             margin-bottom: 73px;
             text-align: center;
@@ -488,16 +489,9 @@ body, html {
                 width: 85px;
             }
         }
-
-   
     &__grid[data-columns]::before {
         content: '3 .column.size-1of3';
     }
-    
-    .column { 
-        float: left; 
-        margin-bottom: 78px;
-        }
     &__firstCol {
         margin-right: 29px;
     }
@@ -508,7 +502,14 @@ body, html {
     &__firstImg {
         margin-bottom: 29px;
     }
-    }
+}
+
+    .column { 
+        float: left; 
+        margin-bottom: 78px;
+        }
+   
+    
 
 .brandSection {
         background: #f8f9fa;
