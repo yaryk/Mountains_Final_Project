@@ -44,7 +44,8 @@ gulp.task("js:vendor", function() {
         "node_modules/bootstrap/dist/js/bootstrap.js",
         "node_modules/jquery-bar-rating/dist/jquery.barrating.min.js",
         "node_modules/masonry-layout/dist/masonry.pkgd.min.js",
-        "node_modules/flickity/dist/flickity.pkgd.min.js"
+        "node_modules/flickity/dist/flickity.pkgd.min.js",
+        "node_modules/salvattore/dist/salvattore.min.js"
         
     ])
     .pipe(concat("vendor.js"))

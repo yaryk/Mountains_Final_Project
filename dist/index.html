@@ -61,7 +61,7 @@
         <section class="aboutUsSection">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-5 align-middle">
+                    <div class="col-md-5 col-sm-12 align-middle">
                         <div class="aboutUsSection__containerLeft">
                             <h2 class="headerSecond aboutUsSection__header">About us</h2>
                             <p class="contentText aboutUsSection__capture">
@@ -71,9 +71,9 @@
                             <a href="#" class="BlueBtn aboutUsSection__btn">Read more</a>
                         </div>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-7 col-sm-12">
                         <div class="aboutUsSection__containerRight">
-                            <img src="/imgs/photoAboutSection.jpg" alt="photo" class="aboutUsSection__bigPhoto">
+                            <img src="/imgs/photoAboutSection.jpg" alt="photo" class="aboutUsSection__bigPhoto img-responsive">
                             <img src="/imgs/smallPhotoAbouSection.jpg" alt="photo" class="aboutUsSection__smallPhoto">
                         </div>
                     </div>
@@ -304,45 +304,18 @@
         <section class="gallerySection">
             <div class="container">
                 <h2 class="headerSecond gallerySection__header">Gallery</h2>
-                <!--<div class="gallerySection__grid">
-                    <div class="gallerySection__img">
-                        <img src="imgs/galleryImg1.jpg" class="" alt="img">
+                <div class="gallerySection__grid" data-columns>
+                    <div class="column gallerySection__firstCol size-1of3">
+                        <div><img src="imgs/galleryImg1.jpg" class="img-responsive gallerySection__firstImg" alt="img"></div>
+                        <div><img src="imgs/galleryImg4.jpg" class="img-responsive" alt="img"></div>
                     </div>
-                    <div class="gallerySection__img">
-                        <img src="imgs/galleryImg2.jpg" alt="img">
+                    <div class="column gallerySection__secondCol size-1of3">
+                        <div><img src="imgs/galleryImg2.jpg" class="img-responsive gallerySection__firstImg" alt="img"></div>
+                        <div><img src="imgs/galleryImg5.jpg" class="img-responsive" alt="img"></div>
                     </div>
-                    <div class="gallerySection__img">
-                        <img src="imgs/galleryImg3.jpg"  alt="img">
-                    </div>
-                    <div class="gallerySection__img">
-                        <img src="imgs/galleryImg4.jpg"  alt="img">
-                    </div>
-                    <div class="gallerySection__img">
-                        <img src="imgs/galleryImg5.jpg"  alt="img">
-                    </div>
-                    <div class="gallerySection__img">
-                        <img src="imgs/galleryImg6.jpg"  alt="img">
-                    </div>-->
-                <div class="con">
-                    <div class="masonryImage w1 h1">
-                        <img src="imgs/galleryImg1.jpg" class="img-responsive" alt="img">
-                    </div>
-
-                    <div class="masonryImage w2 h2">
-                        <img src="imgs/galleryImg2.jpg" class="img-responsive" alt="img">
-                    </div>
-
-                    <div class="masonryImage w3 h1">
-                        <img src="imgs/galleryImg3.jpg" class="img-responsive" alt="img">
-                    </div>
-                    <div class="masonryImage w1 h3">
-                        <img src="imgs/galleryImg4.jpg" class="img-responsive" alt="img">
-                    </div>
-                    <div class="masonryImage w2 h4">
-                        <img src="imgs/galleryImg5.jpg" class="img-responsive" alt="img">
-                    </div>
-                    <div class="masonryImage w3 h3">
-                        <img src="imgs/galleryImg6.jpg" class="img-responsive" alt="img">
+                    <div class="column size-1of3">
+                        <div><img src="imgs/galleryImg3.jpg" class="img-responsive gallerySection__firstImg" alt="img"></div>
+                        <div><img src="imgs/galleryImg6.jpg" class="img-responsive" alt="img"></div>
                     </div>
                 </div>
             </div>

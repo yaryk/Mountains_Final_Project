@@ -92,9 +92,7 @@ body, html {
     }
 
     &__bigPhoto {
-        // max-height: 400px;
         margin-top: -36px;
-        margin-left: -10%;
         
     }
 
@@ -491,24 +489,36 @@ body, html {
             }
         }
 
-       
-       
-       
-        &__img {
-           
+   
+    &__grid[data-columns]::before {
+        content: '3 .column.size-1of3';
+    }
+    
+    .column { 
+        float: left; 
+        margin-bottom: 78px;
         }
+    &__firstCol {
+        margin-right: 29px;
+    }
+    &__secondCol {
+        margin-right: 29px;
+    }
+
+    &__firstImg {
+        margin-bottom: 29px;
+    }
     }
 
 .brandSection {
-    background: #f8f9fa;
-    
+        background: #f8f9fa;
+        
 
-    &__carousel {
-        margin-top: 75px;
-        margin-bottom: 75px;
-    }   
-}
-
+        &__carousel {
+            margin-top: 75px;
+            margin-bottom: 75px;
+        }   
+    }
 .ourClientsSaySection {
     background: url("../imgs/bgOurClientsSay.png");
     background-size: 100% 100%;

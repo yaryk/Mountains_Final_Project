@@ -16,6 +16,10 @@ $(function () { // jquery bar rating
   columnWidth: 380
   
 });
+ $('.grid').masonry({
+  itemSelector: '.grid-item',
+  // columnWidth: 50
+});
 
 
      $('.brandSection__carousel').flickity({
