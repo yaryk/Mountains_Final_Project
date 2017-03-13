@@ -68,6 +68,7 @@ body, html {
 .aboutUsSection {
     background: url("../imgs/bgMap.png") no-repeat;
     background-color: #f6f4f4;
+    background-size: 70%;
     background-position: center;
 
     &__containerLeft {
@@ -98,7 +99,7 @@ body, html {
 
     &__smallPhoto {
         margin-top: -250px;
-        margin-left: -90px;     
+        margin-left: -10%;     
     }
 
 }
@@ -677,5 +678,73 @@ body, html {
         margin-top: -250px;
         margin-left: -150px;
     }
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .aboutUsSection {
+       background-position: 50% 20%;
+       &__containerLeft {
+           margin-top: 100px;
+       }
+        &__header {
+            text-align: center;
+            &:before {
+                width: 85px;
+            }
+        }
+
+        &__capture {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__btnContainer {
+           text-align: center;
+            margin-bottom: 90px;
+        }
+       
+    }
+}
+
+@media (max-width: 768px) {
+    .mainSection {
+       &__header {
+           font-size: 38px;
+       } 
+       &__img {
+          width: 350px; 
+       }
+       &__capture {
+           width: 300px;
+       }
+       &__btn {
+           padding: 20px 65px;
+       }
+    }
+    .aboutUsSection {
+       background-position: 50% 20%;
+       &__containerLeft {
+           margin-top: 100px;
+       }
+        &__header {
+            text-align: center;
+            &:before {
+                width: 85px;
+            }
+        }
+
+        &__capture {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__btnContainer {
+           text-align: center;
+            margin-bottom: 90px;
+        }
+       &__smallPhoto {
+           width: 220px;
+           margin-top: -210px;
+       }
     }
 }
