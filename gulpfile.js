@@ -24,8 +24,8 @@ gulp.task("css:own", function() {
 gulp.task("css:vendor", function() {
     return gulp.src([
         "node_modules/bootstrap/dist/css/bootstrap.css",
-        "node_modules/font-awesome/css/font-awesome.min.css",
-        "node_modules/flickity/dist/flickity.min.css"
+        "node_modules/flickity/dist/flickity.min.css",
+        "node_modules/jquery-bar-rating/dist/themes/fontawesome-stars.css"
     ])
     .pipe(gulpIf(!isDevelopment, nano()))
     .pipe(concat("vendor.css"))

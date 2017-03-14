@@ -371,10 +371,11 @@ body, html {
     } //---- weWonnaWorkSection end 
     
 // travel with us
-.travelWithUs {
+.travelWithUsSection {
     height: 1024px;
-    background-image: url(../imgs/bgTravelWithUs.png);
+    background-image: url(../imgs/bgtravelWithUs.png);
     background-size: 100% 100%;
+    background-position: bottom;
     background-repeat: no-repeat;
     margin-bottom: 72px;
     &__header {
@@ -384,7 +385,6 @@ body, html {
             width: 85px;
         }
     }
-
    
     &__cardContainer {
         width: 17%;
@@ -393,30 +393,24 @@ body, html {
         border-radius: 3px;
         padding: 0;
         margin-bottom: 194px;
-
+        
         &__carpathian {
             background: url(../imgs/bgCarpathian.jpg);
-            background-repeat: no-repeat;
+            background-size: 100% 120%;
         }
         &__alps {
             background: url(../imgs/bgAlps.jpg);
-            background-repeat: no-repeat;
         }
 
         &__pyrenees {
             background: url(../imgs/bgPyrenees.jpg);
-            background-repeat: no-repeat;
-            
+            background-size: 100% 120%;
         }
         &__rocky {
             background: url(../imgs/bgRocky.jpg);
-            background-repeat: no-repeat;
-            
         }
         &__kavkaz {
-            background: url(../imgs/bgRocky.jpg);
-            background-repeat: no-repeat;
-            
+            background: url(../imgs/bgKavkaz.jpg);
         }
 
         &__stars {
@@ -432,7 +426,7 @@ body, html {
         }
 
         &__capture {
-            margin: auto auto 140px 22px;
+            margin: auto auto 65% 22px;
             font-family: "OpenSansRegular", sans-serif;
             color: #fff;
             font-size: 16px;
@@ -468,16 +462,15 @@ body, html {
         }
     }
 }
-// customization themes from stars
+// custom reting stars
 .br-theme-fontawesome-stars .br-widget a:after {
-  content: '\f005';
   color: #fff;
 }
 .br-theme-fontawesome-stars .br-widget a.br-active:after {
   color: @blue-main;
 }
 .br-theme-fontawesome-stars .br-widget a.br-selected:after {
-  color: @blue-main;
+  color: @blue-main;;
 }
 
 // gallery section 
@@ -503,24 +496,25 @@ body, html {
     &__firstImg {
         margin-bottom: 29px;
     }
-}
+
 
     .column { 
         float: left; 
         margin-bottom: 78px;
         }
-   
+ }  
     
-
+// BRAND SECTION SLIDER!!!!!!!!!!!
 .brandSection {
         background: #f8f9fa;
-        
 
         &__carousel {
             margin-top: 75px;
             margin-bottom: 75px;
         }   
     }
+
+// .ourClientsSaySection//////////////
 .ourClientsSaySection {
     background: url("../imgs/bgOurClientsSay.png");
     background-size: 100% 100%;
@@ -706,6 +700,7 @@ body, html {
             }
         }
     }
+
     .howWeWorkSection {
        margin-bottom: 30px;
         &__header {
@@ -726,6 +721,35 @@ body, html {
             }
         }
     }
+
+    .travelWithUsSection {
+        background-size: 100% 80%;
+        padding-top: 150px;
+        &__cardContainer {
+
+            &__stars {
+                margin-left: 15px;
+                margin-bottom: 100px;
+            }
+            &__header {
+                margin-left: 0;
+            }
+            &__capture {
+                margin-left: 10px;
+            }
+            &__priceContainer {
+
+                &__oldPrice {
+                    margin: 0;
+                    font-size: 13px;
+                }
+                &__price {
+                    margin: 0;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -743,6 +767,7 @@ body, html {
            padding: 20px 65px;
        }
     }
+
     .aboutUsSection {
        background-position: 50% 20%;
        &__containerLeft {
@@ -769,6 +794,7 @@ body, html {
            margin-top: -210px;
        }
     }
+
     .wonnaGoSection {
         &__form {
 
@@ -784,6 +810,7 @@ body, html {
             }
         }
     }
+
     .howWeWorkSection {
        margin-bottom: 30px;
         &__header {
@@ -804,4 +831,35 @@ body, html {
             }
         }
     }
+
+    .travelWithUsSection {
+        background-size: 100% 85%;
+        height: 745px;
+        &__cardContainer {
+
+            &__stars {
+                margin-left: 10px;
+                margin-bottom: 80px;
+            }
+            &__header {
+                margin-left: 0;
+                font-size: 22px;
+            }
+            &__capture {
+                margin-left: 5px;
+            }
+            &__priceContainer {
+
+                &__oldPrice {
+                    margin: 0;
+                    font-size: 13px;
+                }
+                &__price {
+                    margin: 0;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+        
 }

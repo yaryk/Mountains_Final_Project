@@ -1,9 +1,5 @@
-var orderNow = document.forms.orderNow;
-orderNow.addEventListener("submit", function (e) {
-  e.preventDefault();
-});
 
-$(function () { // jquery bar rating
+$(function () { 
   // collapsed icon menu
   $('#menu-collapse').on('shown.bs.collapse', function () {
        $(".glyphicon").removeClass("glyphicon glyphicon-menu-hamburger").addClass("glyphicon glyphicon-menu-up");
@@ -13,34 +9,34 @@ $(function () { // jquery bar rating
        $(".glyphicon").removeClass("glyphicon glyphicon-menu-up").addClass("glyphicon glyphicon-menu-hamburger");
     });
     // плавний скролінг на якорі
-  $(document).on('click', 'a', function(e){
-    e.preventDefault();
-    
-    $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 500);
+$(document).on('click', 'a', function(e){
+  e.preventDefault();
+  
+  $('html, body').animate({
+      scrollTop: $( $.attr(this, 'href') ).offset().top
+  }, 500);
 });
-  $('.rate').barrating({
-    theme: 'fontawesome-stars',
-    allowEmpty: true
-  });
+  
+$(".rate").barrating({
+        theme: 'fontawesome-stars'
+      });
 
-  $('.journalSection__cardsContainer').masonry({
+$('.journalSection__cardsContainer').masonry({
   itemSelector: '.card',
   columnWidth: 380
 });
- $('.grid').masonry({
-  itemSelector: '.grid-item',
-  // columnWidth: 50
+ 
+$('.grid').masonry({
+  itemSelector: '.grid-item'
 });
 
 
-     $('.brandSection__carousel').flickity({
-     freeScroll : true, 
-     contain : true, 
-     prevNextButtons : false, 
-     pageDots : false,
-     wrapAround: true
+$('.brandSection__carousel').flickity({
+  freeScroll : true, 
+  contain : true, 
+  prevNextButtons : false, 
+  pageDots : false,
+  wrapAround: true
 });
 
 })
