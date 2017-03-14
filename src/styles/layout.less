@@ -483,26 +483,35 @@ body, html {
                 width: 85px;
             }
         }
-    &__grid[data-columns]::before {
-        content: '3 .column.size-1of3';
-    }
-    &__firstCol {
-        margin-right: 29px;
-    }
-    &__secondCol {
-        margin-right: 29px;
-    }
 
-    &__firstImg {
-        margin-bottom: 29px;
-    }
-
-
-    .column { 
-        float: left; 
-        margin-bottom: 78px;
+        &__grid[data-columns]::before {
+            content: '3 .column.size-1of3';
         }
- }  
+        .size-1of3 {
+            width: 25%;
+        }
+        
+
+        // &__firstCol {
+        //     width: 23%;
+        //     margin-right: 29px;
+        // }
+        // &__secondCol {
+        //    width: 32%;
+        //    margin-right: 29px;
+        // }
+        // &__thirdCol {
+        //     width: 40%;
+        // }
+        .gallerySection__firstRow {
+            margin-bottom: 29px;
+        }
+      
+        .column { 
+             float: left; 
+        }
+       
+    }  
     
 // BRAND SECTION SLIDER!!!!!!!!!!!
 .brandSection {
@@ -517,7 +526,10 @@ body, html {
 // .ourClientsSaySection//////////////
 .ourClientsSaySection {
     background: url("../imgs/bgOurClientsSay.png");
-    background-size: 100% 100%;
+    background-size: 100% 80%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
     &__header {
         text-align: center;
         margin-top: 70px;
@@ -750,6 +762,32 @@ body, html {
             }
         }
     }
+
+    .ourClientsSaySection {
+
+        &__header {
+            margin: 50px 0;
+        }
+
+        &__author {
+            margin-bottom: 0;
+        }
+
+        &__contactForm {
+            width: 450px;
+
+            &__btn {
+                padding: 30px 170px;
+            }
+        }
+    }
+}
+
+.gallerySection {
+
+     &__grid[data-columns]::before {
+        content: '3 .column.size-1of3';
+    }
 }
 
 @media (max-width: 768px) {
@@ -861,5 +899,32 @@ body, html {
             }
         }
     }
-        
+
+    .ourClientsSaySection {
+        background-size: 100% 60%;
+
+        &__header {
+            margin: 25px 0;
+        }
+
+        &__author {
+            margin-bottom: 0;
+        }
+
+        &__contactForm {
+            width: 450px;
+
+            &__btn {
+                padding: 30px 170px;
+            }
+        }
+    }
+    .footer {
+        &__copyright {
+            font-size: 11px;
+        }
+        &__number {
+            font-size: 19px;
+        }
+    }   
 }
