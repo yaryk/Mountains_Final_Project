@@ -160,7 +160,7 @@ body, html {
         font-size: 20px;
         text-align: center;
         height: 380px;
-
+       
         &__name {
             color: @blue-main;
             text-transform: uppercase;
@@ -200,7 +200,10 @@ body, html {
             font-style: italic;
         }
     }
+    
 }
+
+
 
 .wonnaGoSection {
     background-color: #f6f4f4;
@@ -675,6 +678,14 @@ body, html {
     }
 }
 
+@media (min-width: 993px) and (max-width: 1200px) {
+    .journalSection {
+        &__textCard {
+           left: 560px !important;
+        
+        }
+    }
+}
 
 @media (min-width: 768px) and (max-width: 992px) {
     .aboutUsSection {
@@ -763,6 +774,14 @@ body, html {
         }
     }
 
+    .journalSection {
+        &__cardsContainer {
+            width: 380px !important;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+    }
+
     .ourClientsSaySection {
 
         &__header {
@@ -781,7 +800,8 @@ body, html {
             }
         }
     }
-}
+
+}     
 
 .gallerySection {
 
@@ -919,6 +939,15 @@ body, html {
             }
         }
     }
+
+    .journalSection {
+        &__cardsContainer {
+            width: 380px !important;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+    }
+
     .footer {
         &__copyright {
             font-size: 11px;
@@ -926,5 +955,6 @@ body, html {
         &__number {
             font-size: 19px;
         }
-    }   
+    }
+       
 }
