@@ -478,7 +478,7 @@ body, html {
 
 // gallery section 
     .gallerySection {
-
+        margin-bottom: 80px;
         &__header {
             margin-bottom: 73px;
             text-align: center;
@@ -490,22 +490,7 @@ body, html {
         &__grid[data-columns]::before {
             content: '3 .column.size-1of3';
         }
-        .size-1of3 {
-            width: 25%;
-        }
         
-
-        // &__firstCol {
-        //     width: 23%;
-        //     margin-right: 29px;
-        // }
-        // &__secondCol {
-        //    width: 32%;
-        //    margin-right: 29px;
-        // }
-        // &__thirdCol {
-        //     width: 40%;
-        // }
         .gallerySection__firstRow {
             margin-bottom: 29px;
         }
@@ -513,7 +498,14 @@ body, html {
         .column { 
              float: left; 
         }
+        
+        &__firstCol {
+            margin-right: 29px;
+        }
        
+        &__secondCol {
+            margin-right: 29px;
+        }
     }  
     
 // BRAND SECTION SLIDER!!!!!!!!!!!
@@ -678,13 +670,42 @@ body, html {
     }
 }
 
+
 @media (min-width: 993px) and (max-width: 1200px) {
     .journalSection {
         &__textCard {
            left: 560px !important;
-        
         }
     }
+
+    .gallerySection {
+       margin-bottom: 20px;
+        &__firstRow {
+            margin-bottom: 15px !important;
+        }
+
+        &__firstCol {
+            margin-right: 15px;
+            width: 275px;
+        }
+        
+        &__secondCol {
+            margin-right: 15px;
+        }
+        &__fColImg{
+            width: 219px;
+        }
+        &__sColImg{
+            width: 300px;
+        }
+        &__tColImg{
+            width: 380px;
+        }
+    }
+    .column.size-1of3 {
+        width: auto;
+    }
+    
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -800,15 +821,37 @@ body, html {
             }
         }
     }
+ 
+    .gallerySection {
+       margin-bottom: 20px;
+        &__firstRow {
+            margin-bottom: 5px !important;
+        }
+
+        &__firstCol {
+            margin-right: 5px;
+            width: 275px;
+        }
+        
+        &__secondCol {
+            margin-right: 5px;
+        }
+        &__fColImg{
+            width: 170px;
+        }
+        &__sColImg{
+            width: 233px;
+        }
+        &__tColImg{
+            width: 295px;
+        }
+    }
+    .column.size-1of3 {
+        width: auto;
+    }
+
 
 }     
-
-.gallerySection {
-
-     &__grid[data-columns]::before {
-        content: '3 .column.size-1of3';
-    }
-}
 
 @media (max-width: 768px) {
     .mainSection {
@@ -947,6 +990,36 @@ body, html {
             margin-bottom: 20px;
         }
     }
+
+    .gallerySection {
+       margin-bottom: 20px;
+        &__firstRow {
+            margin-bottom: 5px !important;
+        }
+
+        &__firstCol {
+            margin-right: 5px;
+            margin-left: 40px;
+        }
+        
+        &__secondCol {
+            margin-right: 5px;
+        }
+        &__fColImg{
+            width: 200px;
+           
+        }
+        &__sColImg{
+            width: 275px;
+        }
+        &__tColImg{
+            display: none;
+        }
+    }
+    .column.size-1of3 {
+        width: auto;
+    }
+
 
     .footer {
         &__copyright {
