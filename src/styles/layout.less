@@ -203,8 +203,6 @@ body, html {
     
 }
 
-
-
 .wonnaGoSection {
     background-color: #f6f4f4;
     background-image: url("../imgs/bgWonnaGo.png");
@@ -226,7 +224,7 @@ body, html {
 
     &__form {
         margin-bottom: 18px;
-
+        position: relative;
         &__fName, &__phone {
             height: 70px;
             width: 300px;
@@ -257,7 +255,17 @@ body, html {
                 content: "sdsd";
             }
         }
-        
+        &__errorName {
+            position: absolute;
+            top: -20px;
+            left: 20px;
+        }
+
+        &__errorPhone {
+            position: absolute;
+            top: -20px;
+            left: 320px;
+        }
         &__btn {
             padding: 23px 57px;
             margin-left: -211px;
@@ -280,6 +288,10 @@ body, html {
             margin-right: 12px;
         }
     }
+}
+.error {
+    color: #ccc;
+    font-family: "OpenSansRegular", sans-serif;
 }
 
 .howWeWorkSection {
@@ -477,37 +489,36 @@ body, html {
 }
 
 // gallery section 
-    .gallerySection {
-        margin-bottom: 80px;
-        &__header {
-            margin-bottom: 73px;
-            text-align: center;
-            &:before {
-                width: 85px;
-            }
+.gallerySection {
+    margin-bottom: 80px;
+    &__header {
+        margin-bottom: 73px;
+        text-align: center;
+        &:before {
+            width: 85px;
         }
+    }
 
-        &__grid[data-columns]::before {
-            content: '3 .column.size-1of3';
-        }
-        
-        .gallerySection__firstRow {
-            margin-bottom: 29px;
-        }
-      
-        .column { 
-             float: left; 
-        }
-        
-        &__firstCol {
-            margin-right: 29px;
-        }
-       
-        &__secondCol {
-            margin-right: 29px;
-        }
-    }  
+    &__grid[data-columns]::before {
+        content: '3 .column.size-1of3';
+    }
     
+    .gallerySection__firstRow {
+        margin-bottom: 29px;
+    }
+    
+    .column { 
+            float: left; 
+    }
+    
+    &__firstCol {
+        margin-right: 29px;
+    }
+    
+    &__secondCol {
+        margin-right: 29px;
+    }
+}  
 // BRAND SECTION SLIDER!!!!!!!!!!!
 .brandSection {
         background: #f8f9fa;
@@ -579,6 +590,7 @@ body, html {
         background-size: 100% 100%;
         border-radius: 10px;
         margin-bottom: 165px;
+       
         &__header {
             text-transform: uppercase;
             color: @blue-main;
@@ -607,15 +619,35 @@ body, html {
             color: @gray-main;
             font-family: "RobotoLight";
             font-size: 18px;
-            margin-bottom: 20px;
+            margin-top: 20px;
+        
             &:focus {
                 outline: none;
             }
         }
-
+        &__errorName {
+            position: absolute;
+        }
+        &__errorNumber {
+            position: absolute;
+        }
+        &__errorEmail {
+            position: absolute;
+        }
         &__btn {
             padding: 30px 203px; 
+            margin-top: 20px;
             letter-spacing: 2px;  
+        }
+    }
+}
+
+.mapSection {
+    &__header {
+        margin-bottom: 20px;
+        text-align: center;
+        &:before {
+            width: 85px;
         }
     }
 }
@@ -670,6 +702,9 @@ body, html {
     }
 }
 
+.toast-message {
+    font-family: "OpenSansRegular", sans-serif;
+}
 
 @media (min-width: 993px) and (max-width: 1200px) {
     .journalSection {
@@ -741,6 +776,10 @@ body, html {
             }
             &__phone {
                 width: 450px;
+            }
+
+            &__errorPhone {
+                left: 273px;
             }
         }
     }
@@ -897,13 +936,19 @@ body, html {
     }
 
     .wonnaGoSection {
+        &__content {
+            width: 500px;
+        }
         &__form {
-
             &__fName {
                 width: 200px;
             }
             &__phone {
                 width: 315px;
+            }
+
+            &__errorPhone {
+                left: 225px;
             }
             &__btn {
                 padding: 23px 25px;

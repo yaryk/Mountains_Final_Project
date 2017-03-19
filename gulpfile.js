@@ -25,7 +25,8 @@ gulp.task("css:vendor", function() {
     return gulp.src([
         "node_modules/bootstrap/dist/css/bootstrap.css",
         "node_modules/flickity/dist/flickity.min.css",
-        "node_modules/jquery-bar-rating/dist/themes/fontawesome-stars.css"
+        "node_modules/jquery-bar-rating/dist/themes/fontawesome-stars.css",
+        "node_modules/toastr/build/toastr.css"
     ])
     .pipe(gulpIf(!isDevelopment, nano()))
     .pipe(concat("vendor.css"))
@@ -45,7 +46,9 @@ gulp.task("js:vendor", function() {
         "node_modules/jquery-bar-rating/dist/jquery.barrating.min.js",
         "node_modules/masonry-layout/dist/masonry.pkgd.min.js",
         "node_modules/flickity/dist/flickity.pkgd.min.js",
-        "node_modules/salvattore/dist/salvattore.min.js"
+        "node_modules/salvattore/dist/salvattore.min.js",
+        "node_modules/jquery-validation/dist/jquery.validate.js",
+        "node_modules/toastr/toastr.js"
         
     ])
     .pipe(concat("vendor.js"))

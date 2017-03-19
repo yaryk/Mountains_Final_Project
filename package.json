@@ -23,9 +23,11 @@
     "install": "^0.8.7",
     "jquery": "^3.1.1",
     "jquery-bar-rating": "^1.2.2",
+    "jquery-validation": "^1.16.0",
     "masonry-layout": "^4.1.1",
     "npm": "^4.3.0",
-    "salvattore": "^1.0.9"
+    "salvattore": "^1.0.9",
+    "toastr": "^2.1.2"
   },
   "devDependencies": {
     "browser-sync": "^2.18.8",

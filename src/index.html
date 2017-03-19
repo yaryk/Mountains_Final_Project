@@ -12,6 +12,7 @@
 
 <body>
     <div class="wrapper u-clearfix">
+        
         <header class="header">
             <div class="container">
                 <div class="header__logo">
@@ -32,7 +33,7 @@
                                 <a href="#jornal" class="menu__link">Journal</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#wonnaGo" class="menu__link">Wonna Go</a>
+                                <a href="#work" class="menu__link">Work</a>
                             </li>
                             <li class="menu__item">
                                 <a href="#travel" class="menu__link">Travel</a>
@@ -45,7 +46,28 @@
                             </li>
                         </ul>
                         <div class="header__contactBtn-container">
-                            <a href="#" class="header__contactBtn">Call us</a>
+                            <a href="#" class="header__contactBtn" data-target="#contactsModal" data-toggle="modal">Call us</a>
+                            <div class="modal fade" id="contactsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog modal-sm" role="document">
+                        <div class="modal-content ">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Our contacts</h4>
+                            </div>
+                            <div class="modal-body">
+                                <ul class="contacts-list">
+                                    <li class="contacts-list__mail ">someMain@***.com</li>
+                                    <li class="contacts-list__tel ">+00 (00) 0000 000</li>
+                                    <li class="contacts-list__skype "> skype</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="BlueBtn btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                         </div>
                     </div>
                 </nav>
@@ -60,7 +82,7 @@
                     <p class="contentText contentText mainSection__capture">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aspernatur.
                     </p>
-                    <a href="#" class="BlueBtn mainSection__btn">Order now</a>
+                    <a href="#wonnaGo" class="BlueBtn mainSection__btn">Order now</a>
                 </div>
             </div>
         </section>
@@ -139,16 +161,21 @@
                 <h2 class="headerSecond wonnaGoSection__header">Do you wonna go?</h2>
                 <p class="contentText wonnaGoSection__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Unde culpa, odit nihil tenetur iste amet accusantiumeos
                     at ipsum, excepturi!</p>
-                <form name="orderNow" class="wonnaGoSection__form">
-                    <input class="wonnaGoSection__form__fName" type="text" name="fName" placeholder="Your name:">
+                <form name="orderNow" id="orderNow" class="wonnaGoSection__form">
+                    <input class="wonnaGoSection__form__fName" 
+                    type="text" 
+                    name="name" 
+                    placeholder="Your name:">
+                    <span class="wonnaGoSection__form__errorName"></span>
                     <input class="wonnaGoSection__form__phone" type="text" name="phone" placeholder="Your phone:">
+                    <span class="wonnaGoSection__form__errorPhone"></span>
                     <button type="submit" class="BlueBtn wonnaGoSection__form__btn">Order now</button>
                 </form>
                 <div class="span wonnaGoSection__warr"><span class="wonnaGoSection__warr__icon"></span> * Your data will not be transferred</div>
             </div>
         </section>
         <!--HOW WE WORK SECTION-->
-        <section class="howWeWorkSection">
+        <section class="howWeWorkSection" id="work">
             <div class="container">
                 <h2 class="headerSecond howWeWorkSection__header text-center">
                     How we work
@@ -400,15 +427,30 @@
                     </div>
                 </div>
 
-                <form action="#" class="ourClientsSaySection__contactForm" name="contactForm">
+                <form action="#" id="contactForm" class="ourClientsSaySection__contactForm" name="contactForm">
                     <h3 class="ourClientsSaySection__contactForm__header">Contacts</h3>
                     <p class="ourClientsSaySection__contactForm__capture">Sign up for our newsletter to receive updates</p>
                     <input type="text" name="name" class="ourClientsSaySection__contactForm__input" placeholder="Name">
+                    <span class="ourClientsSaySection__contactForm__errorName"></span>
                     <input type="text" name="phoneNumber" class="ourClientsSaySection__contactForm__input" placeholder="Phone">
+                    <span class="ourClientsSaySection__contactForm__errorNumber"></span>
                     <input type="text" name="email" class="ourClientsSaySection__contactForm__input" placeholder="Email">
+                    <span class="ourClientsSaySection__contactForm__errorEmail"></span>
                     <input type="submit" class="BlueBtn ourClientsSaySection__contactForm__btn" value="Send">
                 </form>
             </div>
+        </section>
+        <!--Map section-->
+        <section class="mapSection">
+            <h2 class="headerSecond mapSection__header">We are here</h2>
+            <iframe 
+                width="100%"
+                height="450" 
+                frameborder="0" 
+                style="border:0" 
+                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJdc6CS602MEcR6FSx7UekhMQ&key=AIzaSyDQF7f67s6AO-mxzVtCwYr-3SrckzSxHac" 
+                allowfullscreen>
+            </iframe>
         </section>
     </div>
 
