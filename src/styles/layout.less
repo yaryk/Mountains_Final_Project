@@ -203,6 +203,21 @@ body, html {
     
 }
 
+.weOffer {
+    box-shadow: 0 -1px 20px #ccc;
+    &__header {
+        &:before {
+            width: 84px;
+        }
+    }
+}
+.dataTables_wrapper {
+    font-family: sans-serif;
+    font-size: 13px;
+  
+}
+
+
 .wonnaGoSection {
     background-color: #f6f4f4;
     background-image: url("../imgs/bgWonnaGo.png");
@@ -385,7 +400,9 @@ body, html {
       } //---- container end
     } //---- weWonnaWorkSection end 
     
+
 // travel with us
+
 .travelWithUsSection {
     height: 1024px;
     background-image: url(../imgs/bgtravelWithUs.png);
@@ -408,7 +425,27 @@ body, html {
         border-radius: 3px;
         padding: 0;
         margin-bottom: 194px;
-        
+
+        &:hover {
+        cursor: pointer;
+        animation-name: pulse;
+        animation-duration: 0.2s;
+        transform: scale3d(1.05, 1.05, 1.05);
+            @keyframes pulse {
+                from {
+                    transform: scale3d(1, 1, 1);
+                }
+
+                25% {
+                    transform: scale3d(1.05, 1.05, 1.05);
+                }
+                
+                to {
+                    transform: scale3d(1, 1, 1);
+                }
+            }
+        }
+
         &__carpathian {
             background: url(../imgs/bgCarpathian.jpg);
             background-size: 100% 120%;
@@ -477,16 +514,31 @@ body, html {
         }
     }
 }
-// custom reting stars
-.br-theme-fontawesome-stars .br-widget a:after {
-  color: #fff;
+.orderTravelModal {
+    &__header {
+        font-family: "RobotoBlack", sans-serif;
+        font-size: 30px;
+        color: @gray-main;
+    }
+    &__price {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    &__capture {
+        font-size: 20px;
+    }
+    &__country {
+        text-transform: uppercase;
+    }
+    &__btn {
+        padding: 10px 40%;
+        display: block !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
 }
-.br-theme-fontawesome-stars .br-widget a.br-active:after {
-  color: @blue-main;
-}
-.br-theme-fontawesome-stars .br-widget a.br-selected:after {
-  color: @blue-main;;
-}
+
 
 // gallery section 
 .gallerySection {
@@ -519,6 +571,7 @@ body, html {
         margin-right: 29px;
     }
 }  
+
 // BRAND SECTION SLIDER!!!!!!!!!!!
 .brandSection {
         background: #f8f9fa;
@@ -700,10 +753,6 @@ body, html {
         font-weight: bolder;
         float: right;
     }
-}
-
-.toast-message {
-    font-family: "OpenSansRegular", sans-serif;
 }
 
 @media (min-width: 993px) and (max-width: 1200px) {
@@ -1064,7 +1113,6 @@ body, html {
     .column.size-1of3 {
         width: auto;
     }
-
 
     .footer {
         &__copyright {

@@ -54,3 +54,53 @@ a {
 		text-decoration: none;
 	}
 }
+
+// some styles for plugins and other
+.toast-message {
+    font-family: "OpenSansRegular", sans-serif;
+}
+// customization for gellary zoom
+.mfp-counter {
+    font-family: "OpenSansRegular", sans-sarive;
+}
+.mfp-fade.mfp-bg {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+
+  &.mfp-ready {
+    opacity: 0.8;
+  }
+  &.mfp-removing {
+    opacity: 0;  
+  }
+
+  &.mfp-wrap .mfp-content {
+    opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  }
+  &.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+    &.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+}
+.mfp-zoom-out-cur {
+    cursor: default;
+}
+// custom reting stars
+.br-theme-fontawesome-stars .br-widget a:after {
+  color: #fff;
+}
+.br-theme-fontawesome-stars .br-widget a.br-active:after {
+  color: @blue-main;
+}
+.br-theme-fontawesome-stars .br-widget a.br-selected:after {
+  color: @blue-main;;
+}

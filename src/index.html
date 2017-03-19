@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
 </head>
 
 <body>
     <div class="wrapper u-clearfix">
-        
+
         <header class="header">
             <div class="container">
                 <div class="header__logo">
@@ -48,26 +49,26 @@
                         <div class="header__contactBtn-container">
                             <a href="#" class="header__contactBtn" data-target="#contactsModal" data-toggle="modal">Call us</a>
                             <div class="modal fade" id="contactsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                    <div class="modal-dialog modal-sm" role="document">
-                        <div class="modal-content ">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                <div class="modal-dialog modal-sm" role="document">
+                                    <div class="modal-content ">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                         aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="myModalLabel">Our contacts</h4>
+                                            <h4 class="modal-title" id="myModalLabel">Our contacts</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <ul class="contacts-list">
+                                                <li class="contacts-list__mail ">someMain@***.com</li>
+                                                <li class="contacts-list__tel ">+00 (00) 0000 000</li>
+                                                <li class="contacts-list__skype "> skype</li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="BlueBtn btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="modal-body">
-                                <ul class="contacts-list">
-                                    <li class="contacts-list__mail ">someMain@***.com</li>
-                                    <li class="contacts-list__tel ">+00 (00) 0000 000</li>
-                                    <li class="contacts-list__skype "> skype</li>
-                                </ul>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="BlueBtn btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                         </div>
                     </div>
                 </nav>
@@ -155,6 +156,32 @@
                 </div>
             </div>
         </section>
+        <!--We OFFER SECTION-->
+        <section class="weOffer">
+            <div class="container">
+                <h2 class="headerSecond weOffer__header text-center">We offer</h2>
+                <table id="example" class="display" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Country</th>
+                            <th>City</th>
+                            <th>Hotel</th>
+                            <th>Stars.</th>
+                            <th>Days</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Country</th>
+                            <th>City</th>
+                            <th>Hotel</th>
+                            <th>Stars</th>
+                            <th>Days</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
         <!--DO YOU WONNA GO SECTION-->
         <section class="wonnaGoSection" id="wonnaGo">
             <div class="container">
@@ -162,10 +189,7 @@
                 <p class="contentText wonnaGoSection__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Unde culpa, odit nihil tenetur iste amet accusantiumeos
                     at ipsum, excepturi!</p>
                 <form name="orderNow" id="orderNow" class="wonnaGoSection__form">
-                    <input class="wonnaGoSection__form__fName" 
-                    type="text" 
-                    name="name" 
-                    placeholder="Your name:">
+                    <input class="wonnaGoSection__form__fName" type="text" name="name" placeholder="Your name:">
                     <span class="wonnaGoSection__form__errorName"></span>
                     <input class="wonnaGoSection__form__phone" type="text" name="phone" placeholder="Your phone:">
                     <span class="wonnaGoSection__form__errorPhone"></span>
@@ -243,7 +267,8 @@
                     Travel with us
                 </h2>
                 <div class="row">
-                    <div class="travelWithUsSection__cardContainer travelWithUsSection__cardContainer__carpathian col-md-2 col-sm-4 col-xs-4">
+                    <div class="travelWithUsSection__cardContainer travelWithUsSection__cardContainer__carpathian col-md-2 col-sm-4 col-xs-4"
+                    data-toggle="modal" data-target="#orderTravelModal">
                         <div class="travelWithUsSection__cardContainer__stars">
                             <select class="rate">
                                 <option value=""></option>
@@ -254,14 +279,15 @@
                                 <option value="5">5</option>
                             </select>
                         </div>
-                        <h3 class="travelWithUsSection__cardContainer__header">Carpathian</h3>
+                        <h3 class="travelWithUsSection__cardContainer__header">Karpaty</h3>
                         <p class="travelWithUsSection__cardContainer__capture">Lorem ipsum dolor sit amet, consectetur.</p>
                         <div class="travelWithUsSection__cardContainer__priceContainer">
                             <span class="travelWithUsSection__cardContainer__priceContainer__oldPrice">3150$</span>
                             <span class="travelWithUsSection__cardContainer__priceContainer__price">$793</span>
                         </div>
                     </div>
-                    <div class="travelWithUsSection__cardContainer travelWithUsSection__cardContainer__alps col-md-2 col-sm-4 col-xs-4">
+                    <div class="travelWithUsSection__cardContainer travelWithUsSection__cardContainer__alps col-md-2 col-sm-4 col-xs-4"
+                    data-toggle="modal" data-target="#orderTravelModal">
                         <div class="travelWithUsSection__cardContainer__stars">
                             <select class="rate">
                                 <option value=""></option>
@@ -279,7 +305,8 @@
                             <span class="travelWithUsSection__cardContainer__priceContainer__price">$1893</span>
                         </div>
                     </div>
-                    <div class="travelWithUsSection__cardContainer travelWithUsSection__cardContainer__pyrenees col-md-2 col-sm-4 col-xs-4">
+                    <div class="travelWithUsSection__cardContainer travelWithUsSection__cardContainer__pyrenees col-md-2 col-sm-4 col-xs-4"
+                    data-toggle="modal" data-target="#orderTravelModal">
                         <div class="travelWithUsSection__cardContainer__stars">
                             <select class="rate">
                                 <option value=""></option>
@@ -297,7 +324,8 @@
                             <span class="travelWithUsSection__cardContainer__priceContainer__price">$2593</span>
                         </div>
                     </div>
-                    <div class="travelWithUsSection__cardContainer travelWithUsSection__cardContainer__rocky col-md-2 col-sm-6 col-xs-6">
+                    <div class="travelWithUsSection__cardContainer travelWithUsSection__cardContainer__rocky col-md-2 col-sm-6 col-xs-6"
+                    data-toggle="modal" data-target="#orderTravelModal">
                         <div class="travelWithUsSection__cardContainer__stars">
                             <select class="rate">
                                 <option value=""></option>
@@ -315,7 +343,8 @@
                             <span class="travelWithUsSection__cardContainer__priceContainer__price">$2123</span>
                         </div>
                     </div>
-                    <div class="travelWithUsSection__cardContainer travelWithUsSection__cardContainer__kavkaz col-md-2 col-sm-6 col-xs-6">
+                    <div class="travelWithUsSection__cardContainer travelWithUsSection__cardContainer__kavkaz col-md-2 col-sm-6 col-xs-6"
+                    data-toggle="modal" data-target="#orderTravelModal">
                         <div class="travelWithUsSection__cardContainer__stars">
                             <select class="rate">
                                 <option value=""></option>
@@ -334,6 +363,27 @@
                         </div>
                     </div>
                 </div>
+                <!--modal window-->
+                <div class="modal fade orderTravelModal" id="orderTravelModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title text-center orderTravelModal__header">Order travel <span class="orderTravelModal__country"></span></h4>
+                            </div>
+                            <div class="modal-body">
+                                <p class="orderTravelModal__price contentText text-center"></p>
+                                <p class="orderTravelModal__capture contentText text-center">Enter your email we'll send you more info</p>
+                                <form id="modalForm">
+                                    <div class="form-group">
+                                        <input class="form-control ourClientsSaySection__contactForm__input" name="email" placeholder="email"></input>
+                                    </div>
+                                    <button class="BlueBtn orderTravelModal__btn">Send</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!--GALLERY-->
@@ -347,7 +397,7 @@
                     </div>
                     <div class="column size-1of3 gallerySection__secondCol">
                         <div><img src="imgs/galleryImg2.jpg" class="gallerySection__sColImg gallerySection__firstRow" alt="img"></div>
-                        <div><img src="imgs/galleryImg5.jpg" class="gallerySection__sColImg"  alt="img"></div>
+                        <div><img src="imgs/galleryImg5.jpg" class="gallerySection__sColImg" alt="img"></div>
                     </div>
                     <div class="column size-1of3 gallerySection__thirdCol">
                         <div><img src="imgs/galleryImg3.jpg" class="gallerySection__tColImg gallerySection__firstRow" alt="img"></div>
@@ -443,12 +493,7 @@
         <!--Map section-->
         <section class="mapSection">
             <h2 class="headerSecond mapSection__header">We are here</h2>
-            <iframe 
-                width="100%"
-                height="450" 
-                frameborder="0" 
-                style="border:0" 
-                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJdc6CS602MEcR6FSx7UekhMQ&key=AIzaSyDQF7f67s6AO-mxzVtCwYr-3SrckzSxHac" 
+            <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJdc6CS602MEcR6FSx7UekhMQ&key=AIzaSyDQF7f67s6AO-mxzVtCwYr-3SrckzSxHac"
                 allowfullscreen>
             </iframe>
         </section>
@@ -489,7 +534,3 @@
 </body>
 
 </html>
-
-
-
- 

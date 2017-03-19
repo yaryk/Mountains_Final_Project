@@ -7,7 +7,7 @@ $(function () {
   $('#menu-collapse').on('hidden.bs.collapse', function () {
     $(".glyphicon").removeClass("glyphicon glyphicon-menu-up").addClass("glyphicon glyphicon-menu-hamburger");
   });
-  // плавний скролінг на якорі
+  // scrolling
   $(document).on('click', 'a', function (e) {
     e.preventDefault();
 
@@ -16,8 +16,28 @@ $(function () {
     }, 500);
   });
 
+  // travel with us (rate(sturs) and modal for each card)
   $(".rate").barrating({
     theme: 'fontawesome-stars'
+  });
+
+  $('#orderTravelModal').on('show.bs.modal', function (event) {
+    $(this).find('.orderTravelModal__country').text(event.relatedTarget.children[1].innerText);
+    $(this).find('.orderTravelModal__price').text("Price " + event.relatedTarget.children[3].children[1].innerText);
+  });
+  $("#modalForm").validate({
+    rules: {
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    submitHandler: function() {
+      toastr.success("Send");
+      $('#modalForm').get(0).reset();
+      $('#orderTravelModal').modal("hide");
+      return false;
+    }
   });
 
   $('.journalSection__cardsContainer').masonry({
@@ -25,8 +45,40 @@ $(function () {
     columnWidth: 380
   });
 
+
   $('.grid').masonry({
     itemSelector: '.grid-item'
+  });
+
+  $('.gallerySection__grid').magnificPopup({
+    type: 'image',
+    closeBtnInside: false,
+    removalDelay: 300,
+    mainClass: 'mfp-fade',
+    items: [
+      {
+        src: '../imgs/galleryImg1.jpg',
+      },
+      {
+        src: '../imgs/galleryImg2.jpg',
+      },
+      {
+        src: "../imgs/galleryImg3.jpg",
+      },
+      {
+        src: "../imgs/galleryImg4.jpg",
+      },
+      {
+        src: "../imgs/galleryImg5.jpg",
+      },
+      {
+        src: "../imgs/galleryImg6.jpg",
+      }
+
+    ],
+    gallery: {
+      enabled: true
+    }
   });
 
   $('.brandSection__carousel').flickity({
@@ -103,8 +155,8 @@ $(function () {
     errorPlacement: function (error, element) {
       if (element[0].name == "name") {
         error.appendTo(".ourClientsSaySection__contactForm__errorName");
-      } 
-      else if(element[0].name == "phoneNumber") {
+      }
+      else if (element[0].name == "phoneNumber") {
         error.appendTo(".ourClientsSaySection__contactForm__errorNumber");
       } else {
         error.appendTo(".ourClientsSaySection__contactForm__errorEmail");
@@ -119,6 +171,11 @@ $(function () {
       $('#contactForm').get(0).reset();
       return false;
     }
+  });
+
+  // datatable ajax request
+  $('#example').DataTable({
+    ajax: "offers.json"
   });
 });
 

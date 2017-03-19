@@ -26,7 +26,9 @@ gulp.task("css:vendor", function() {
         "node_modules/bootstrap/dist/css/bootstrap.css",
         "node_modules/flickity/dist/flickity.min.css",
         "node_modules/jquery-bar-rating/dist/themes/fontawesome-stars.css",
-        "node_modules/toastr/build/toastr.css"
+        "node_modules/toastr/build/toastr.css",
+        "node_modules/datatables.net-dt/css/jquery.dataTables.css",
+        "node_modules/magnific-popup/dist/magnific-popup.css"
     ])
     .pipe(gulpIf(!isDevelopment, nano()))
     .pipe(concat("vendor.css"))
@@ -48,8 +50,9 @@ gulp.task("js:vendor", function() {
         "node_modules/flickity/dist/flickity.pkgd.min.js",
         "node_modules/salvattore/dist/salvattore.min.js",
         "node_modules/jquery-validation/dist/jquery.validate.js",
-        "node_modules/toastr/toastr.js"
-        
+        "node_modules/toastr/toastr.js",
+        "node_modules/datatables.net/js/jquery.dataTables.js",
+        "node_modules/magnific-popup/dist/jquery.magnific-popup.js"
     ])
     .pipe(concat("vendor.js"))
     .pipe(gulpIf(!isDevelopment, uglify()))
