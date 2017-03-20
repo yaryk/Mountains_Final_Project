@@ -7,6 +7,10 @@ $(function () {
   $('#menu-collapse').on('hidden.bs.collapse', function () {
     $(".glyphicon").removeClass("glyphicon glyphicon-menu-up").addClass("glyphicon glyphicon-menu-hamburger");
   });
+
+// $('.mainSection').jarallax();
+
+
   // scrolling
   $(document).on('click', 'a', function (e) {
     e.preventDefault();
@@ -174,7 +178,7 @@ $(function () {
   });
 
   // datatable ajax request
-  $('#example').DataTable({
+  $('#offers').DataTable({
     ajax: "offers.json"
   });
 });

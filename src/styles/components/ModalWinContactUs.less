@@ -1,41 +1,51 @@
-.contacts-list{
-    list-style: none;
-  font-family: FiraSansRegular;
-  font-size: 18px;
-  color: #000;
-  padding: 0;
-  margin: 0;
-
-  &__mail{
-      
-    &:before {
-      content: ' ';
-      display: inline-block;
-      width: 30px;
-      height: 15px;
-      background: url("../imgs/mail-icon.png") no-repeat;
-    }
+.callUsModal {
+  &__header {
+    font-family: "RobotoBlack", sans-serif;
+    font-size: 20px;
+    color: @gray-main;
   }
+  &__contacts-list{
+      list-style: none;
+      padding: 0;
+      margin: 0;
 
-  &__tel{
-
-    &:before {
-      content: ' ';
-      display: inline-block;
-      width: 30px;
-      height: 15px;
-      background: url("../imgs/phone-icon.png") no-repeat;
+    &__mail{
+        font-family: "FiraSansRegular", sans-serif;
+        font-size: 18px;
+        color: #000; 
+          &:before {
+            content: ' ';
+            display: inline-block;
+            width: 30px;
+            height: 15px;
+            background: url("../imgs/mail-icon.png") no-repeat;
+          }
     }
-  }
 
-  &__skype{
+    &__tel{
+      font-family: "FiraSansRegular", sans-serif;
+      font-size: 18px;
+      color: #000;
+        &:before {
+          content: ' ';
+          display: inline-block;
+          width: 30px;
+          height: 15px;
+          background: url("../imgs/phone-icon.png") no-repeat;
+        }
+    }
 
-    &:before {
-      content: ' ';
-      display: inline-block;
-      width: 30px;
-      height: 17px;
-      background: url("../imgs/skype-icon.png") no-repeat;
+    &__skype{
+      font-family: "FiraSansRegular", sans-serif;
+      font-size: 18px;
+      color: #000;
+        &:before {
+          content: ' ';
+          display: inline-block;
+          width: 30px;
+          height: 17px;
+          background: url("../imgs/skype-icon.png") no-repeat;
+        }
     }
   }
 }

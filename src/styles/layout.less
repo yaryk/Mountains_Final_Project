@@ -34,8 +34,6 @@ body, html {
 .mainSection {
     background: url("/imgs/bgMainSection.png") top center;
     background-size: cover;
-    
-   
     &__container {
         padding-top: 200px;
         padding-bottom: 70px;
@@ -206,17 +204,26 @@ body, html {
 .weOffer {
     box-shadow: 0 -1px 20px #ccc;
     &__header {
+        margin-bottom: 40px;
+        margin-top: 10px;
         &:before {
             width: 84px;
         }
     }
+   
 }
 .dataTables_wrapper {
-    font-family: sans-serif;
-    font-size: 13px;
-  
+    font-family: "OpanSansRegular", sans-serif;
+    font-size: 16px;
+    // color: @gray-main; 
 }
-
+.pagination > .active > a {
+    background-color: @blue-main;
+    border-color: @blue-main;
+    &:focus {
+        outline: none;
+    }
+}
 
 .wonnaGoSection {
     background-color: #f6f4f4;
