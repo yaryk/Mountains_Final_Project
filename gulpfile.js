@@ -36,7 +36,7 @@ gulp.task("css:vendor", function() {
 });
 // scripts 
 gulp.task("js:own", function() {
-    return gulp.src("src/js/main.js")
+    return gulp.src("src/js/*.js")
     .pipe(uglify())
     .pipe(gulp.dest("dist/js"));
 });
@@ -73,7 +73,14 @@ gulp.task("html", function() {
     return gulp.src("src/*.html")
     .pipe(gulp.dest("dist/"));
 });
-
+gulp.task("fonts", function() {
+    return gulp.src("fonts/*.*")
+        .pipe(gulp.dest("dist/fonts/"));
+});
+gulp.task("data", function() {
+    return gulp.src("offers.json")
+        .pipe(gulp.dest("dist/"));
+});
 gulp.task("watch", ["build"] ,function() {
     sync.init({
         server: "dist"
@@ -88,5 +95,5 @@ gulp.task("watch", ["build"] ,function() {
 });
 
 gulp.task("build", ["js:own", "css:own", "html"]);
-gulp.task("deploy", ["js:own", "css:own", "html", "images", "js:vendor", "css:vendor"]);
+gulp.task("deploy", ["js:own", "css:own", "html", "images", "js:vendor", "css:vendor", "fonts", "data"]);
 gulp.task("default", ["build", "watch"]);
