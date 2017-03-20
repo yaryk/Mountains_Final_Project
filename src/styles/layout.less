@@ -26,11 +26,11 @@ body, html {
 
 .contentText {
     color: @gray-main;
-        font-family: "OpenSansRegular", sans-serif;
-        font-size: 14px;
-        line-height: 20px;
-
+    font-family: "OpenSansRegular", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
 }
+
 .mainSection {
     background: url("/imgs/bgMainSection.png") top center;
     background-size: cover;
@@ -127,7 +127,6 @@ body, html {
         position: relative;
         width: 380px;
         height: 380px;
-        
     }
 
     &__smallImg {
@@ -188,7 +187,6 @@ body, html {
             margin: 0 auto;
             margin-bottom: 42px;
             width: 270px;
-             
         }
 
         &__count {
@@ -198,7 +196,6 @@ body, html {
             font-style: italic;
         }
     }
-    
 }
 
 .weOffer {
@@ -212,6 +209,7 @@ body, html {
     }
    
 }
+// custom styling for table
 .dataTables_wrapper {
     font-family: "OpanSansRegular", sans-serif;
     font-size: 16px;
@@ -259,7 +257,7 @@ body, html {
             &:focus {
                 outline: none;
             }
-            }
+        }
 
         &__phone {
             width: 550px;
@@ -310,6 +308,7 @@ body, html {
         }
     }
 }
+// custom validation error styling
 .error {
     color: #ccc;
     font-family: "OpenSansRegular", sans-serif;
@@ -403,11 +402,15 @@ body, html {
           &.checkSign {
             right: -538px;
           }
-      } //---- container end
-    } //---- weWonnaWorkSection end 
-    
+      }
+    } 
 
-// travel with us
+
+
+
+
+
+
 
 .travelWithUsSection {
     height: 1024px;
@@ -473,7 +476,6 @@ body, html {
 
         &__stars {
             margin: 15px auto 132px 22px;
-            
         }
 
         &__header {
@@ -506,7 +508,6 @@ body, html {
                 color: #fff;
                 font-family: "OpenSansRegular", sans-serif;
                 font-size: 18px;
-
             }
 
             &__price {
@@ -520,6 +521,7 @@ body, html {
         }
     }
 }
+
 .orderTravelModal {
     &__header {
         font-family: "RobotoBlack", sans-serif;
@@ -545,8 +547,6 @@ body, html {
     
 }
 
-
-// gallery section 
 .gallerySection {
     margin-bottom: 80px;
     &__header {
@@ -590,17 +590,14 @@ body, html {
     }
 }  
 
-// BRAND SECTION SLIDER!!!!!!!!!!!
 .brandSection {
-        background: #f8f9fa;
+    background: #f8f9fa;
+    &__carousel {
+        margin-top: 75px;
+        margin-bottom: 75px;
+    }   
+}
 
-        &__carousel {
-            margin-top: 75px;
-            margin-bottom: 75px;
-        }   
-    }
-
-// .ourClientsSaySection//////////////
 .ourClientsSaySection {
     background: url("../imgs/bgOurClientsSay.png");
     background-size: 100% 80%;
@@ -759,18 +756,17 @@ body, html {
            &:hover {
                transform: scale(1.2);
            }
-          
-    }
-            &__link.tw {
-                background-position: 0 0;
-            }
-            &__link.fb {
-                background-position: 0 -75px;
-            }
-            &__link.vk {
-                background-position: 0 -38px;
-            }
         }
+        &__link.tw {
+            background-position: 0 0;
+        }
+        &__link.fb {
+            background-position: 0 -75px;
+        }
+        &__link.vk {
+            background-position: 0 -38px;
+        }
+    } //--- end social
 
     &__number {
         font-family: "RobotoBlack", sans-serif;
@@ -845,12 +841,10 @@ body, html {
            text-align: center;
             margin-bottom: 90px;
         }
-       
     }
 
     .wonnaGoSection {
         &__form {
-
             &__fName {
                 width: 250px;
             }
@@ -923,7 +917,6 @@ body, html {
     }
 
     .ourClientsSaySection {
-
         &__header {
             margin: 50px 0;
         }
@@ -945,7 +938,6 @@ body, html {
        margin-bottom: 20px;
         &__firstRow {
             margin-bottom: 5px !important;
-           
         }
 
         &__firstCol {
@@ -969,8 +961,6 @@ body, html {
     .column.size-1of3 {
         width: auto;
     }
-
-
 }     
 
 @media (max-width: 768px) {
@@ -1154,5 +1144,4 @@ body, html {
             font-size: 19px;
         }
     }
-       
 }

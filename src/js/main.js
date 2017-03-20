@@ -10,20 +10,19 @@ $(function () {
 
   // scrolling for link
   $(document).on('click', 'a', function (e) {
-    if(this.href.match(/#\w+/)){
+    if (this.href.match(/#\w+/)) {
       e.preventDefault();
       $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top
-    }, 500);
-  }
+      }, 500);
+    }
   });
 
-  // travel with us (rate(sturs) and modal for each card)
+  // travel with us (rate(stars) and modal for each card)
   $(".rate").barrating({
     theme: 'fontawesome-stars'
   });
-  
-  
+  // modal for travel section cards
   $('#orderTravelModal').on('show.bs.modal', function (event) {
     $(this).find('.orderTravelModal__country').text(event.relatedTarget.children[1].innerText);
     $(this).find('.orderTravelModal__price').text("Price " + event.relatedTarget.children[3].children[1].innerText);
@@ -35,7 +34,7 @@ $(function () {
         email: true
       }
     },
-    submitHandler: function() {
+    submitHandler: function () {
       toastr.success("Send");
       $('#modalForm').get(0).reset();
       $('#orderTravelModal').modal("hide");
@@ -48,11 +47,10 @@ $(function () {
     columnWidth: 380
   });
 
-
   $('.grid').masonry({
     itemSelector: '.grid-item'
   });
-
+  // for gallery zoom 
   $('.gallerySection__grid').magnificPopup({
     type: 'image',
     closeBtnInside: false,
