@@ -10,14 +10,14 @@ $(function () {
 
 // $('.mainSection').jarallax();
 
-
-  // scrolling
+  // scrolling for link
   $(document).on('click', 'a', function (e) {
-    e.preventDefault();
-
-    $('html, body').animate({
-      scrollTop: $($.attr(this, 'href')).offset().top
+    if(this.href.match(/#\w+/)){
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
     }, 500);
+  }
   });
 
   // travel with us (rate(sturs) and modal for each card)
@@ -153,7 +153,7 @@ $(function () {
       },
       email: {
         required: "Please enter an email",
-        email: "Please enter valid email"
+        email: "Please  enter valid email"
       }
     },
     errorPlacement: function (error, element) {

@@ -215,7 +215,6 @@ body, html {
 .dataTables_wrapper {
     font-family: "OpanSansRegular", sans-serif;
     font-size: 16px;
-    // color: @gray-main; 
 }
 .pagination > .active > a {
     background-color: @blue-main;
@@ -302,12 +301,12 @@ body, html {
 
         &:before {
             content: "" ;
-            background: url("../imgs/lockIcon.png");
+            background: url("../imgs/iconsSprite.png");
             display: block;
-            width: 14px;
-            height: 16px;
+           background-position: -0px -151px; width: 14px; height: 16px;
             float: left;   
             margin-right: 12px;
+            margin-top: -2px;
         }
     }
 }
@@ -564,8 +563,20 @@ body, html {
     
     .gallerySection__firstRow {
         margin-bottom: 29px;
+        transition: transform 0.2s, filter 0.1s;
+        &:hover {
+            filter: grayscale(50%);
+            transform: scale(1.1);
+        }
     }
     
+    &__secondRow {
+         transition: transform 0.2s, filter 0.1s;
+        &:hover {
+            filter: grayscale(50%);
+            transform: scale(1.1);
+        }
+    }
     .column { 
             float: left; 
     }
@@ -615,9 +626,10 @@ body, html {
         &:before {
             content: "";
             display: block;
-            width: 24px;
+            background: url("../imgs/iconsSprite.png");
+            background-position: -0px -114px; 
+            width: 24px; 
             height: 22px;
-            background: url("../imgs/quote.png");
             margin-bottom: 20px;
         }
     }
@@ -742,7 +754,10 @@ body, html {
             width: 39px;
             height: 39px;
             background: url(../imgs/vkIcon.png);
-           
+            transition: transform 0.3s;
+           &:hover {
+               transform: scale(1.2);
+           }
         }
         &__link.tw {
             background: url(../imgs/twIcon.png);
