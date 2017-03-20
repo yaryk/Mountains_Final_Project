@@ -53,8 +53,9 @@ gulp.task("js:vendor", function() {
         "node_modules/toastr/toastr.js",
         "node_modules/datatables.net/js/jquery.dataTables.js",
         "node_modules/magnific-popup/dist/jquery.magnific-popup.js",
-        "node_modules/High-Performance-Background-Parallax-Effect-with-jQuery-CSS3-jarallax/jarallax/jarallax.js",
-        "node_modules/datatables.net-bs/js/dataTables.bootstrap.js"
+        "node_modules/datatables.net-bs/js/dataTables.bootstrap.js",
+        "src/js/paraxify.js"
+        
     ])
     .pipe(concat("vendor.js"))
     .pipe(gulpIf(!isDevelopment, uglify()))

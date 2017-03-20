@@ -8,8 +8,6 @@ $(function () {
     $(".glyphicon").removeClass("glyphicon glyphicon-menu-up").addClass("glyphicon glyphicon-menu-hamburger");
   });
 
-// $('.mainSection').jarallax();
-
   // scrolling for link
   $(document).on('click', 'a', function (e) {
     if(this.href.match(/#\w+/)){
@@ -24,7 +22,8 @@ $(function () {
   $(".rate").barrating({
     theme: 'fontawesome-stars'
   });
-
+  
+  
   $('#orderTravelModal').on('show.bs.modal', function (event) {
     $(this).find('.orderTravelModal__country').text(event.relatedTarget.children[1].innerText);
     $(this).find('.orderTravelModal__price').text("Price " + event.relatedTarget.children[3].children[1].innerText);
@@ -182,6 +181,3 @@ $(function () {
     ajax: "offers.json"
   });
 });
-
-
-

@@ -751,22 +751,26 @@ body, html {
 
         &__link {
             display: block;
-            width: 39px;
-            height: 39px;
-            background: url(../imgs/vkIcon.png);
+            background: url(../imgs/iconsSprite.png);
+            background-repeat: no-repeat;
+            width: 38px;
+            height: 38px;
             transition: transform 0.3s;
            &:hover {
                transform: scale(1.2);
            }
-        }
-        &__link.tw {
-            background: url(../imgs/twIcon.png);
-        }
-        &__link.fb {
-            background: url(../imgs/facebookIcon.png);
-        }
-       
+          
     }
+            &__link.tw {
+                background-position: 0 0;
+            }
+            &__link.fb {
+                background-position: 0 -75px;
+            }
+            &__link.vk {
+                background-position: 0 -38px;
+            }
+        }
 
     &__number {
         font-family: "RobotoBlack", sans-serif;
@@ -815,6 +819,11 @@ body, html {
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
+    .mainSection {
+        background-size: 150% 100%;
+        background-repeat: no-repeat;
+        background-position: 15% 150%;
+    }
     .aboutUsSection {
        background-position: 50% 20%;
        &__containerLeft {
@@ -936,6 +945,7 @@ body, html {
        margin-bottom: 20px;
         &__firstRow {
             margin-bottom: 5px !important;
+           
         }
 
         &__firstCol {
