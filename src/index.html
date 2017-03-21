@@ -49,32 +49,29 @@
                             </li>
                         </ul>
 
-                        <!--modal window-->
                         <div class="header__contactBtn-container">
-                            <a href="#" class="header__contactBtn" data-target="#contactsModal" data-toggle="modal">Call us</a>
-
-                            <div class="modal fade" id="contactsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                <div class="modal-dialog modal-sm callUsModal" role="document">
-                                    <div class="modal-content ">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                        aria-hidden="true">&times;</span></button>
-                                            <h4 class="modal-title callUsModal__header" id="myModalLabel">Our contacts</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            <ul class="callUsModal__contacts-list">
-                                                <li class="callUsModal__contacts-list__mail ">someMain@***.com</li>
-                                                <li class="callUsModal__contacts-list__tel ">+00 (00) 0000 000</li>
-                                                <li class="callUsModal__contacts-list__skype "> skype</li>
-                                            </ul>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="BlueBtn btn btn-default" data-dismiss="modal">Close</button>
-                                        </div>
+                            <a href="#" id="callBtn" class="header__contactBtn" data-toggle="modal" data-target="#callback">Callback</a>
+                        </div>
+                        <!--modal window-->
+                        <div class="modal fade callbackModal" id="callback" tabindex="-1" role="dialog">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title text-center callbackModal__header">Leave phone number we call you later</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="callbackForm">
+                                            <div class="form-group">
+                                                <input class="form-control callbackModal__input" name="number" placeholder="phone number"></input>
+                                            </div>
+                                            <button class="BlueBtn callbackModal__btn">Send</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!--end modal window-->
                     </nav>
                 </div>
         </header>
@@ -388,6 +385,7 @@
                         </div>
                     </div>
                 </div>
+                <!--end modal window-->
             </div>
         </section>
         <!--GALLERY-->
@@ -497,9 +495,11 @@
         <!--Map section-->
         <section class="mapSection">
             <h2 class="headerSecond mapSection__header">We are here</h2>
-            <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJdc6CS602MEcR6FSx7UekhMQ&key=AIzaSyDQF7f67s6AO-mxzVtCwYr-3SrckzSxHac"
-                allowfullscreen>
-            </iframe>
+            <div class="mapSection__mapContainer">
+                <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJdc6CS602MEcR6FSx7UekhMQ&key=AIzaSyDQF7f67s6AO-mxzVtCwYr-3SrckzSxHac"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </section>
 
         </div>

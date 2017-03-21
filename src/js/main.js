@@ -7,6 +7,26 @@ $(function () {
   $('#menu-collapse').on('hidden.bs.collapse', function () {
     $(".glyphicon").removeClass("glyphicon glyphicon-menu-up").addClass("glyphicon glyphicon-menu-hamburger");
   });
+  //  nav menu adaptive sidr plugin for mobile
+  // show mobile menu when screen less then 750 
+  $(window).resize(function (e) {
+    if ($(window).width() <= 750) {
+      showMobileMenu();
+    }
+    else if ($(window).width() >= 750) {
+      $("#sidr").removeClass("sidr left");
+    }
+  });
+  //check screen width
+  if ($(window).width() <= 750) {
+    showMobileMenu();
+  };
+
+  function showMobileMenu() {
+    $('#simple-menu').sidr({
+      side: "right"
+    });
+  }
 
   // scrolling for link
   $(document).on('click', 'a', function (e) {
@@ -35,9 +55,15 @@ $(function () {
       }
     },
     submitHandler: function () {
-      toastr.success("Send");
       $('#modalForm').get(0).reset();
       $('#orderTravelModal').modal("hide");
+      swal({
+        title: "Send",
+        text: "We send you mode info!",
+        type: "success",
+        timer: 2000,
+        showConfirmButton: false
+      });
       return false;
     }
   });
@@ -89,7 +115,30 @@ $(function () {
     pageDots: false,
     wrapAround: true
   });
-
+  // callback form validation 
+  $("#callbackForm").validate({
+    rules: {
+      number: {
+        required: true,
+        number: true
+      }
+    },
+    errorPlacement: function (error, element) {
+      error.insertBefore(element);
+    },
+    submitHandler: function () {
+      $('#callbackForm').get(0).reset();
+      $('#callback').modal("hide");
+      swal({
+        title: "Done",
+        text: "We call you!",
+        type: "success",
+        timer: 2000,
+        showConfirmButton: false
+      });
+      return false;
+    }
+  });
   // order form validation
   $("#orderNow").validate({
     rules: {
@@ -124,27 +173,7 @@ $(function () {
       return false;
     }
   });
-  
-//  nav menu adaptive sidr plugin for mobile
-  // show mobile menu when screen less then 750 
-  $(window).resize(function(e){
-    if ( $(window).width() <= 750 ) {
-      showMobileMenu();
-    } 
-    else if( $(window).width() >= 750 ) {
-      $("#sidr").removeClass( "sidr left" );
-    }
-  });
-//check screen width
-  if ($(window).width() <= 750) {
-      showMobileMenu();
-    };
 
-function showMobileMenu () {
-    $('#simple-menu').sidr({
-      side: "right"
-    });
-}
 
   // contact form validation
   $("#contactForm").validate({
@@ -201,5 +230,13 @@ function showMobileMenu () {
   });
 });
 
+// no scrolling for google maps
+$('.mapSection__mapContainer').click(function () {
+    $('.mapSection__mapContainer iframe').css("pointer-events", "auto");
+});
+
+$( ".mapSection__mapContainer" ).mouseleave(function() {
+  $('.mapSection__mapContainer iframe').css("pointer-events", "none"); 
+});
 
 
