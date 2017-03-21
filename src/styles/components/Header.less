@@ -5,6 +5,10 @@
     background-color: rgba(255,255,255,0.1);
     line-height: 62px;
     box-shadow: 0 0 10px #000;
+
+    &__mobileBtn {
+        display: none;
+    }
     &__logo {
         float: left;
         line-height: 62px;
@@ -78,7 +82,9 @@
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 992px) { 
    .header {
-      
+      &__mobileBtn {
+          display: none;
+      }
        &__contactBtn {
            padding: 5px 20px;
        }
@@ -96,26 +102,29 @@
 /* Medium devices (desktops, 992px and up) */
 @media (max-width: 768px) { 
     .header {
-       
-        &__collapseBtn {
-            margin-top: -5px;
+        
+        &__mobileBtn {
+            display: inline;
+            float: right;
+            line-height: 65px;
+        }
+        &__contactBtn-container {
+            float: none;
+            text-align: center;
         }
     }
 
     .menu {
-        position: absolute;
-        top: 62px;
-        right: 0;
-        &__item {
-            display: block;
+        &__item { 
             float: none;
-            width: 195px;
-            text-align: center;
-            background-color: rgba(255,255,255,0.4);
         }
         &__link {
-            color: #fff;
+            text-align: center;
         }
-       
     }
+   .sidr {
+       width: 200px !important;
+   }
  }
+
+ 

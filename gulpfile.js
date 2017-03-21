@@ -28,7 +28,9 @@ gulp.task("css:vendor", function() {
         "node_modules/jquery-bar-rating/dist/themes/fontawesome-stars.css",
         "node_modules/toastr/build/toastr.css",
         "node_modules/magnific-popup/dist/magnific-popup.css",
-        "node_modules/datatables.net-bs/css/dataTables.bootstrap.css"
+        "node_modules/datatables.net-bs/css/dataTables.bootstrap.css",
+        "node_modules/responsive-nav/responsive-nav.css",
+        "node_modules/sidr/dist/stylesheets/jquery.sidr.light.css"
     ])
     .pipe(gulpIf(!isDevelopment, nano()))
     .pipe(concat("vendor.css"))
@@ -54,7 +56,8 @@ gulp.task("js:vendor", function() {
         "node_modules/datatables.net/js/jquery.dataTables.js",
         "node_modules/magnific-popup/dist/jquery.magnific-popup.js",
         "node_modules/datatables.net-bs/js/dataTables.bootstrap.js",
-        "src/js/paraxify.js"
+        "src/js/paraxify.js",
+        "node_modules/sidr/dist/jquery.sidr.js"
         
     ])
     .pipe(concat("vendor.js"))
@@ -73,10 +76,12 @@ gulp.task("html", function() {
     return gulp.src("src/*.html")
     .pipe(gulp.dest("dist/"));
 });
+// copy fonts
 gulp.task("fonts", function() {
     return gulp.src("fonts/*.*")
         .pipe(gulp.dest("dist/fonts/"));
 });
+// json file (data for datatable)
 gulp.task("data", function() {
     return gulp.src("offers.json")
         .pipe(gulp.dest("dist/"));

@@ -10,7 +10,7 @@ $(function () {
 
   // scrolling for link
   $(document).on('click', 'a', function (e) {
-    if (this.href.match(/#\w+/)) {
+    if (this.href.match(/#\w+/) || this.href == "#sidr") {
       e.preventDefault();
       $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top
@@ -124,6 +124,27 @@ $(function () {
       return false;
     }
   });
+  
+//  nav menu adaptive sidr plugin for mobile
+  // show mobile menu when screen less then 750 
+  $(window).resize(function(e){
+    if ( $(window).width() <= 750 ) {
+      showMobileMenu();
+    } 
+    else if( $(window).width() >= 750 ) {
+      $("#sidr").removeClass( "sidr left" );
+    }
+  });
+//check screen width
+  if ($(window).width() <= 750) {
+      showMobileMenu();
+    };
+
+function showMobileMenu () {
+    $('#simple-menu').sidr({
+      side: "right"
+    });
+}
 
   // contact form validation
   $("#contactForm").validate({
@@ -179,3 +200,6 @@ $(function () {
     ajax: "offers.json"
   });
 });
+
+
+

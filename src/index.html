@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Free Web tutorials">
     <meta name="keywords" content="mountains,landing page,travel,buy,alps,kavkaz,karpaty,rocky">
     <meta name="author" content="Yaroslav Sydoryk">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Mountains landing page</title>
-    
+
     <link rel="stylesheet" href="/css/vendor.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="icon" href="imgs/mountainsFavicon.ico" type="image/x-icon">
@@ -23,13 +24,10 @@
                 <div class="header__logo">
                     <a href="#"> <img src="/imgs/headerLogo.png" alt="logo" class="header__logo__img align-middle"></a>
                 </div>
-                <nav class="header__nav">
-                    <button type="button" class="navbar-toggle collapsed header__collapseBtn" data-toggle="collapse" data-target="#menu-collapse"
-                        aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="glyphicon glyphicon-menu-hamburger"></span>
-                        </button>
-                    <div class="collapse navbar-collapse" id="menu-collapse">
+
+                <a id="simple-menu" class="glyphicon glyphicon-menu-hamburger header__mobileBtn" href="#sidr"></a>
+                <div id="sidr">
+                    <nav class="header__nav ">
                         <ul class="menu">
                             <li class="menu__item">
                                 <a href="#ourStory" class="menu__link">Our Story</a>
@@ -50,6 +48,8 @@
                                 <a href="#clientSay" class="menu__link">Client say</a>
                             </li>
                         </ul>
+
+                        <!--modal window-->
                         <div class="header__contactBtn-container">
                             <a href="#" class="header__contactBtn" data-target="#contactsModal" data-toggle="modal">Call us</a>
 
@@ -75,9 +75,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </nav>
-            </div>
+                    </nav>
+                </div>
         </header>
         <!--MAIN SECTION-->
         <section class="mainSection paraxify" id="mainSection">
@@ -503,39 +502,40 @@
             </iframe>
         </section>
 
-    </div>
+        </div>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-4 col-xs-4">
-                    <span class="footer__copyright">All rights reserved 2015</span>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-4">
-                    <ul class="footer__social">
-                        <li class="footer__social__item">
-                            <a href="https://twitter.com" target="_blank" class="footer__social__link tw">
-                            </a>
-                        </li>
-                        <li class="footer__social__item">
-                            <a href="https://www.facebook.com/" target="_blank" class="footer__social__link fb">
-                            </a>
-                        </li>
-                        <li class="footer__social__item">
-                            <a href="https://vk.com" target="_blank" class="footer__social__link vk">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-4">
-                    <span class="footer__number">1 234 243 123</span>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <span class="footer__copyright">All rights reserved 2015</span>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <ul class="footer__social">
+                            <li class="footer__social__item">
+                                <a href="https://twitter.com" target="_blank" class="footer__social__link tw">
+                                </a>
+                            </li>
+                            <li class="footer__social__item">
+                                <a href="https://www.facebook.com/" target="_blank" class="footer__social__link fb">
+                                </a>
+                            </li>
+                            <li class="footer__social__item">
+                                <a href="https://vk.com" target="_blank" class="footer__social__link vk">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <span class="footer__number">1 234 243 123</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <script src="/js/vendor.js"></script>
-    <script src="/js/main.js"></script>
+        <script src="/js/vendor.js"></script>
+        <script src="/js/main.js"></script>
 
 </body>
+
 </html>

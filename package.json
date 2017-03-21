@@ -22,7 +22,6 @@
     "datatables.net-bs": "^1.10.13",
     "flickity": "^2.0.5",
     "font-awesome": "^4.7.0",
-    "install": "^0.8.7",
     "jquery": "^3.1.1",
     "jquery-bar-rating": "^1.2.2",
     "jquery-validation": "^1.16.0",
@@ -30,6 +29,7 @@
     "masonry-layout": "^4.1.1",
     "npm": "^4.3.0",
     "salvattore": "^1.0.9",
+    "sidr": "^2.2.1",
     "stellar": "0.0.0",
     "toastr": "^2.1.2"
   },
