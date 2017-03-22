@@ -14,11 +14,11 @@ var isDevelopment = false;
 // styles
 gulp.task("css:own", function() {
     return gulp.src("src/styles/main.less")
-            .pipe(gulpIf(isDevelopment, sourcemaps.init()))
+            .pipe(gulpIf(!isDevelopment, sourcemaps.init()))
             .pipe(less())
             .pipe(autoprefixer("last 2 version"))
             .pipe(nano())
-            .pipe(gulpIf(isDevelopment, sourcemaps.write()))
+            .pipe(gulpIf(!isDevelopment, sourcemaps.write()))
             .pipe(gulp.dest("dist/css/"));
 });
 gulp.task("css:vendor", function() {
@@ -39,7 +39,7 @@ gulp.task("css:vendor", function() {
 // scripts 
 gulp.task("js:own", function() {
     return gulp.src("src/js/main.js")
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest("dist/js"));
 });
 
@@ -84,7 +84,7 @@ gulp.task("fonts", function() {
 });
 // json file (data for datatable)
 gulp.task("data", function() {
-    return gulp.src("offers.json")
+    return gulp.src("src/offers.json")
         .pipe(gulp.dest("dist/"));
 });
 gulp.task("watch", ["build"] ,function() {
