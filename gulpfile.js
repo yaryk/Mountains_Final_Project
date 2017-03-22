@@ -29,7 +29,6 @@ gulp.task("css:vendor", function() {
         "node_modules/toastr/build/toastr.css",
         "node_modules/magnific-popup/dist/magnific-popup.css",
         "node_modules/datatables.net-bs/css/dataTables.bootstrap.css",
-        "node_modules/responsive-nav/responsive-nav.css",
         "node_modules/sidr/dist/stylesheets/jquery.sidr.light.css",
         "node_modules/sweetalert/dist/sweetalert.css"
     ])
@@ -40,7 +39,7 @@ gulp.task("css:vendor", function() {
 // scripts 
 gulp.task("js:own", function() {
     return gulp.src("src/js/main.js")
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest("dist/js"));
 });
 

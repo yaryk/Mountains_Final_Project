@@ -404,14 +404,7 @@ body, html {
             right: -538px;
           }
       }
-    } 
-
-
-
-
-
-
-
+} 
 
 .travelWithUsSection {
     height: 1024px;
@@ -720,7 +713,9 @@ body, html {
             width: 85px;
         }
     }
-
+    &__map {
+        pointer-events: none;
+    }
 }
 
 .footer {
@@ -966,6 +961,18 @@ body, html {
 }     
 
 @media (max-width: 768px) {
+//    reset some style for sidr plugin
+   .modal-backdrop.in {
+       display: none;
+   }
+   .sidr h4 {
+       background-image: none;
+       font-size: 36px;
+       padding: 0;
+       color: @gray-main;
+       box-shadow: none;
+   }
+   
     .mainSection {
        &__header {
            font-size: 38px;
@@ -1167,4 +1174,148 @@ body, html {
         }
 
     }
+    .aboutUsSection {
+        &__capture {
+            width: 100%;
+        }
+        &__smallPhoto {
+            height: 155px;
+            width: 155px;
+            margin-top: -70px;
+            margin-left: 0;
+        }
+    }
+
+    .journalSection {
+        &__cardsContainer {
+          width: 280px !important;
+
+        }
+        &__imgCard {
+            width: 280px;
+            height: 280px;
+        }
+        &__img {
+            width: 280px;
+        }
+        &__textCard {
+            width: 280px;
+            &__header {
+               width: 280px; 
+            }
+        }
+    }
+
+.dataTables_wrapper {
+    font-family: "OpanSansRegular", sans-serif;
+    font-size: 13px;
+}
+
+    .wonnaGoSection {
+        &__header {
+            font-size: 15px;
+        }
+        &__content {
+            width: 100%;
+            font-size: 14px;
+        }
+        &__form {
+            &__fName {
+                margin-bottom: 25px;
+                display: block;
+                width: 100%;
+            }
+            &__phone {
+               width: 100%; 
+               margin-left: 0;
+               margin-bottom: 10px;
+            }
+            &__btn {
+                margin: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    .howWeWorkSection {
+        &__container {
+            &__circle {
+                width: 0;
+                height: 0;
+                 &__img {
+                    top: 20px;
+                 }
+                 &__capture {
+                     font-size: 14px;
+                 }
+            }
+            &__header {
+                margin-top: 120px;
+            }
+        }
+    }
+
+    .travelWithUsSection {
+        &__header {
+            margin-bottom: 5px;
+            &:before {
+                margin-bottom: 15px;
+            }
+        }
+        &__cardContainer {
+            margin-bottom: 3px;
+            width: 33%;
+            margin-right: 6%;
+            &__carpathian, &__pyrenees, &__kavkaz {
+                margin-left:  15%;
+            }
+            &__stars {
+                margin-left: 0;
+                margin-bottom: 18px;
+            }
+            &__header {
+                margin: auto auto 20px 0;
+            }
+            &__capture {
+                margin: auto auto 56px 0px;
+            }
+            &__priceContainer {
+                height: 50px;
+                line-height: 54px;
+            }
+        }
+    }
+
+    .ourClientsSaySection {
+        &__contactForm {
+            width: 100%;
+            &__btn {
+                width: 100%;
+                padding: 25px;
+            }
+        }
+    }
+
+    .footer {
+        &__copyrightCol {
+            // width: auto !important;
+            // margin-right: 0;
+            display: none;
+        }
+        &__socialCol {
+            width: auto;
+            padding-right: 0;
+        }
+        &__numberCol {
+            float: right;
+            padding-left: 0;
+            width: auto;
+        }
+        &__copyright {
+            display: none;
+        }
+
+         
+    }
+   
 }
