@@ -246,22 +246,7 @@ $(function () {
       ajax: "offers.json"
     });
   }
-
-  // $(window).resize(function (e) {
-  //   if ($(window).width() < 460) {
-  //     $('#offers').DataTable({
-  //       ajax: "offers.json",
-  //       "columnDefs": [
-  //         {
-  //           "targets": [3],
-  //           "visible": false,
-  //           "searchable": false
-  //         }
-  //       ]
-  //     });
-  //   }
-  // });
-
+ 
   // no scrolling for google maps
   $('.mapSection__mapContainer').click(function () {
     $('.mapSection__mapContainer iframe').css("pointer-events", "auto");
